@@ -1,131 +1,53 @@
-<!doctype html>
-<html class="h-100" lang="pt">
-
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Produtos autênticos e sustentáveis no setor agroalimentar">
-  <title>CrocGold - Produtos com Panko</title>
-
-  <!-- Bootstrap & Theme CSS -->
-  <link rel="stylesheet" href="css/theme.min.css">
-  <link rel="stylesheet" href="css/aos.css">
-
-  <!-- Favicon -->
-  <link rel="icon" href="img/favicon.png" type="image/png">
-
-  <!-- Fonts -->
-  <style>
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      src: url('./fonts/inter-v12-latin-500.woff2') format('woff2');
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrocGold</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
-<body data-bs-spy="scroll" data-bs-target="#navScroll">
-
-  <!-- Navbar -->
-  <nav id="navScroll" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <div class="container">
-      <a class="navbar-brand pe-4 fs-4" href="#">
-        <img src="img/logo.png" alt="Logo" height="40">
-        <span class="ms-2 fw-bold">CrocGold</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#missao">Missão</a></li>
-          <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body>
+  <header>
+    <h1>CrocGold</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="py-vh-5 bg-light text-center d-flex align-items-center" style="min-height: 90vh;" id="hero">
-      <div class="container">
-        <h1 class="display-3 fw-bold mb-3" data-aos="fade-up">Panko com Sabor e Sustentabilidade</h1>
-        <p class="lead" data-aos="fade-up" data-aos-delay="150">Sabores autênticos, qualidade superior e compromisso com o futuro.</p>
-        <img src="img/PeixeEmpanadoPanko-2.webp" alt="Peixe empanado com Panko" class="img-fluid mt-4 rounded shadow" data-aos="zoom-in">
-      </div>
-    </section>
+    <section class="image-gallery">
+      <h2>Galeria de Produtos</h2>
+      <div class="gallery-grid">
+        <picture>
+          <source srcset="croc_site/pexels-nadin-sh-14623904.webp" type="image/webp">
+          <img src="croc_site/pexels-nadin-sh-14623904.jpg" alt="Milho amarelo em grão">
+        </picture>
 
-    <!-- Missao -->
-    <section class="py-vh-5 bg-white" id="missao">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h2 class="fw-bold mb-4">Missão</h2>
-            <p class="lead">Oferecer produtos autêuticos com qualidade e sustentabilidade.<br>Ser uma referência no setor agroalimentar.</p>
-            <p class="fw-bold">Qualidade, Sustentabilidade, Inovação, Rigor, Ética.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <picture>
+          <source srcset="croc_site/ten-don-15.webp" type="image/webp">
+          <img src="croc_site/ten-don-15.jpg" alt="Camarões fritos crocantes">
+        </picture>
 
-    <!-- Produtos -->
-    <section class="py-vh-5 bg-light" id="produtos">
-      <div class="container">
-        <div class="row text-center mb-4">
-          <div class="col">
-            <h2 class="fw-bold">Produtos</h2>
-            <p class="text-muted">Conheça os nossos produtos com farinha Panko</p>
-          </div>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4" data-aos="fade-up">
-            <img src="img/panko-breadcrumbs-2-1200.webp" class="img-fluid rounded shadow" alt="Panko 1">
-            <h5 class="mt-2">Farinha Panko Clássica</h5>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <img src="img/panko-chicken-breast-on-platter.webp" class="img-fluid rounded shadow" alt="Panko 2">
-            <h5 class="mt-2">Frango Empanado</h5>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/PeixeEmpanadoPanko-2.webp" class="img-fluid rounded shadow" alt="Panko 3">
-            <h5 class="mt-2">Peixe Crocante</h5>
-          </div>
-        </div>
-      </div>
-    </section>
+        <picture>
+          <source srcset="croc_site/receita-de-file-de-frango-empanado.webp" type="image/webp">
+          <img src="croc_site/receita-de-file-de-frango-empanado.jpg" alt="Frango empanado suculento">
+        </picture>
 
-    <!-- Contacto -->
-    <section class="py-vh-5 bg-dark text-light" id="contacto">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2 class="fw-bold mb-4">Contacto</h2>
-            <p>Email: <a href="mailto:info@crocgold.pt" class="link-light">info@crocgold.pt</a></p>
-            <p>Telefone: +351 912 345 678</p>
-          </div>
-        </div>
+        <picture>
+          <source srcset="croc_site/sushi.webp" type="image/webp">
+          <img src="croc_site/sushi.jpg" alt="Sushi com tempura crocante">
+        </picture>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white text-center py-4 border-top">
-    <div class="container small">
-      &copy; 2025 CrocGold. Todos os direitos reservados.
-    </div>
+  <footer>
+    <p>&copy; 2025 CrocGold. Todos os direitos reservados.</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800 });
-  </script>
 </body>
-
 </html>
