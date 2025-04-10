@@ -1,142 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CrocGold</title>
-
-  <!-- Estilo básico inline (sem ficheiros externos) -->
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #fffdf9;
-      color: #333;
-    }
-
-    header {
-      background: #fff;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #ff9900;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #ff9900;
-    }
-
-    .image-gallery {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .image-gallery h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery-grid picture {
-      display: block;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-grid picture:hover {
-      transform: scale(1.03);
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    footer {
-      background: #f1f1f1;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crocgold Industry | Tradição, Inovação e Sabor</title>
+  <meta name="description" content="Crocgold Industry – Produção Alimentar Sustentável e Inovadora">
+  <link rel="stylesheet" href="css/theme.min.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
-<body>
-  <header>
-    <h1>CrocGold</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Crocgold</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sustainability">Sustentabilidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="#innovation">Inovação</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contactos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="bg-light py-vh-5 text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Bem-vindo à Crocgold Industry</h1>
+      <p class="lead">Tradição, inovação e sabor na sua mesa.</p>
+      <p class="mb-4">Combinamos o saber-fazer artesanal com tecnologia de ponta, levando o melhor da gastronomia portuguesa ao mundo com responsabilidade e paixão.</p>
+      <a href="#products" class="btn btn-primary m-1">Conheça os nossos produtos</a>
+      <a href="#about" class="btn btn-outline-dark m-1">Sobre nós</a>
+    </div>
   </header>
 
-  <main>
-    <section class="image-gallery" id="produtos">
-      <h2>Galeria de Produtos</h2>
-      <div class="gallery-grid">
-        <picture>
-          <source srcset="croc_site/pexels-nadin-sh-14623904.webp" type="image/webp">
-          <img src="croc_site/pexels-nadin-sh-14623904.jpg" alt="Milho amarelo em grão">
-        </picture>
-        <picture>
-          <source srcset="croc_site/ten-don-15.webp" type="image/webp">
-          <img src="croc_site/ten-don-15.jpg" alt="Camarões fritos crocantes">
-        </picture>
-        <picture>
-          <source srcset="croc_site/receita-de-file-de-frango-empanado.webp" type="image/webp">
-          <img src="croc_site/receita-de-file-de-frango-empanado.jpg" alt="Frango empanado suculento">
-        </picture>
-        <picture>
-          <source srcset="croc_site/sushi.webp" type="image/webp">
-          <img src="croc_site/sushi.jpg" alt="Sushi com tempura crocante">
-        </picture>
-      </div>
-    </section>
-  </main>
+  <section id="about" class="py-vh-4">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Quem Somos</h2>
+      <p>Fundada em 2022, em Mujães (Viana do Castelo), a Crocgold Industry é uma empresa 100% portuguesa focada na produção, comercialização e exportação de produtos alimentares — com destaque na panificação e pastelaria.</p>
+      <p>Aliamos tradição e inovação, respeitando os métodos artesanais com o apoio da tecnologia de fabrico mais avançada. A nossa missão? Criar experiências alimentares autênticas com responsabilidade ambiental e social.</p>
+      <ul>
+        <li><strong>Visão:</strong> Ser referência no setor agroalimentar nacional e internacional.</li>
+        <li><strong>Valores:</strong> Qualidade | Sustentabilidade | Inovação | Rigor | Ética</li>
+      </ul>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 CrocGold. Todos os direitos reservados.</p>
+  <section id="products" class="bg-light py-vh-4">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Produtos</h2>
+      <p>Oferecemos uma gama rica de produtos de panificação, pastelaria e soluções alimentares inovadoras. Cada item é feito com rigor técnico e carinho artesanal — garantindo frescura, sabor e segurança alimentar.</p>
+    </div>
+  </section>
+
+  <section id="sustainability" class="py-vh-4">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Sustentabilidade</h2>
+      <p>A Crocgold acredita que o futuro alimenta-se de escolhas conscientes. Por isso, implementamos práticas sustentáveis como:</p>
+      <ul>
+        <li>Redução do desperdício alimentar</li>
+        <li>Eficiência energética e hídrica</li>
+        <li>Embalagens recicláveis e biodegradáveis</li>
+        <li>Fornecimento local e ético</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="innovation" class="bg-light py-vh-4">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Inovação e Crescimento</h2>
+      <p>Estamos a investir na modernização da nossa unidade produtiva:</p>
+      <ul>
+        <li>Aumento da capacidade de fabrico</li>
+        <li>Digitalização de processos</li>
+        <li>Desenvolvimento de produtos saudáveis e sustentáveis</li>
+        <li>Criação de postos de trabalho qualificado na região</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="py-vh-4 text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Contactos</h2>
+      <p><strong>Morada:</strong> Rua Padre Manuel Lopes Vilaverde, 215<br>4905-513 Mujães, Viana do Castelo – Portugal</p>
+      <p><strong>Email:</strong> <a href="mailto:contacto@crocgold.pt">contacto@crocgold.pt</a></p>
+      <p><strong>Telefone:</strong> +351 XXX XXX XXX</p>
+      <p><strong>Website:</strong> <a href="https://www.crocgold.pt">www.crocgold.pt</a></p>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 Crocgold Industry. Todos os direitos reservados.
   </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800 });
+  </script>
+
 </body>
 </html>
