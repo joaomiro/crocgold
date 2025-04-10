@@ -1,134 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt">
-
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CrocGold</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/theme.min.css">
-  <link rel="icon" href="croc_site/sushi.webp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #333;
     }
-    .hero-img {
-      background-image: url('croc_site/panko-chicken-breast-on-platter.webp');
+    .hero {
+      background-image: url('croc_site/panko-breadcrumbs-2-1200.webp');
       background-size: cover;
       background-position: center;
+      position: relative;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .btn-gold {
+      background-color: #d4af37;
+      color: black;
+      padding: 0.75rem 2rem;
+      border: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      background-color: #c89d2e;
+    }
+    .section {
+      padding: 6rem 1rem;
+    }
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .mission {
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+    .mission p {
+      font-size: 1.25rem;
     }
   </style>
 </head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Bem-vindo à CrocGold</h1>
+      <p class="lead">Excelência em produtos panados com panko e inovação alimentar</p>
+      <a href="#missao" class="btn btn-gold mt-3">Saber mais</a>
+    </div>
+  </header>
 
-<body data-bs-spy="scroll" data-bs-target="#navScroll">
-  <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+  <section class="section mission" id="missao">
     <div class="container">
-      <a class="navbar-brand pe-4 fs-4" href="#">
-        <img src="croc_site/sushi.webp" alt="Logo" width="40" height="40" class="rounded-circle me-2">
-        <span class="fw-bold">CrocGold</span>
-      </a>
+      <h2 class="mb-4">Missão</h2>
+      <p>Oferecer produtos autênticos com qualidade e sustentabilidade.<br>
+        Ser uma referência no setor agroalimentar.<br>
+        <strong>Qualidade, Sustentabilidade, Inovação, Rigor, Ética.</strong></p>
     </div>
-  </nav>
+  </section>
 
-  <main>
-    <header class="vh-100 d-flex align-items-center hero-img text-white text-center">
-      <div class="container">
-        <h1 class="display-2 fw-bold">Sabor crocante, qualidade dourada.</h1>
-        <p class="lead mt-4">Especialistas em panko e empanados com tradição e inovação.</p>
-      </div>
-    </header>
-
-    <section class="py-5" id="missao">
-      <div class="container text-center">
-        <h2 class="display-5 fw-bold mb-4">Missão</h2>
-        <p class="lead">
-          Oferecer produtos autênticos com qualidade e sustentabilidade.<br>
-          Ser uma referência no setor agroalimentar.<br>
-          <strong>Qualidade, Sustentabilidade, Inovação, Rigor, Ética.</strong>
-        </p>
-      </div>
-    </section>
-
-    <section class="py-5 bg-light" id="produtos">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="display-5 fw-bold">Os nossos produtos</h2>
-          <p class="text-muted">Uma seleção crocante de excelência</p>
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-5">Produtos em Destaque</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="croc_site/PeixeEmpanadoPanko-2.webp" class="card-img-top" alt="Peixe Panko">
+            <div class="card-body">
+              <h5 class="card-title">Peixe Empanado</h5>
+              <p class="card-text">Clássico crocante com panko dourado.</p>
+            </div>
+          </div>
         </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <img src="croc_site/PeixeEmpanadoPanko-2.webp" class="img-fluid rounded shadow" alt="Peixe empanado">
-            <h5 class="mt-3 text-center">Peixe Empanado</h5>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="croc_site/Receita-de-Filé-de-frango-empanado.jpg" class="card-img-top" alt="Frango Panko">
+            <div class="card-body">
+              <h5 class="card-title">Frango Crocante</h5>
+              <p class="card-text">Suculento e com cobertura crocante de qualidade.</p>
+            </div>
           </div>
-          <div class="col-md-4">
-            <img src="croc_site/Receita-de-Filé-de-frango-empanado.webp" class="img-fluid rounded shadow" alt="Frango empanado">
-            <h5 class="mt-3 text-center">Frango Crocante</h5>
-          </div>
-          <div class="col-md-4">
-            <img src="croc_site/crispy-panko-baked-eggplant-tenders_2sm.webp" class="img-fluid rounded shadow" alt="Beringela empanada">
-            <h5 class="mt-3 text-center">Veggie Crunch</h5>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="croc_site/panko-chicken-breast-on-platter.webp" class="card-img-top" alt="Panko Original">
+            <div class="card-body">
+              <h5 class="card-title">Panko Tradicional</h5>
+              <p class="card-text">O ingrediente base da nossa crocância.</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="py-5" id="processo">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <h2 class="fw-bold">Do milho ao panko</h2>
-            <p class="text-muted">
-              O nosso processo combina tradição com tecnologia para garantir uma textura crocante inigualável. Desde a escolha do grão até à embalagem final, tudo é pensado para levar o melhor até si.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <img src="croc_site/diferenca-entre-fuba-farinha-milho.webp" class="img-fluid rounded shadow" alt="Farinha de milho">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5 bg-light" id="galeria">
-      <div class="container">
-        <div class="text-center mb-4">
-          <h2 class="display-6 fw-bold">Galeria</h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-3 col-6">
-            <img src="croc_site/panko-breadcrumbs-2-1200.webp" class="img-fluid rounded shadow" alt="Panko">
-          </div>
-          <div class="col-md-3 col-6">
-            <img src="croc_site/pexels-photo-6607320.webp" class="img-fluid rounded shadow" alt="Panko detalhe">
-          </div>
-          <div class="col-md-3 col-6">
-            <img src="croc_site/fried-fish-fillet-sliced-steak-1699742.webp" class="img-fluid rounded shadow" alt="Fish fillet">
-          </div>
-          <div class="col-md-3 col-6">
-            <img src="croc_site/pexels-nadin-sh-14623904.webp" class="img-fluid rounded shadow" alt="Empanado gourmet">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5" id="contacto">
-      <div class="container text-center">
-        <h2 class="display-5 fw-bold mb-4">Vamos trabalhar juntos?</h2>
-        <p class="mb-4">Entre em contacto connosco para parcerias, encomendas ou dúvidas.</p>
-        <a href="mailto:info@crocgold.pt" class="btn btn-warning btn-lg px-4 shadow">Contactar</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p class="mb-0">© 2025 CrocGold. Todos os direitos reservados.</p>
     </div>
+  </section>
+
+  <footer class="text-center py-4 bg-dark text-white">
+    <p class="mb-0">&copy; 2025 CrocGold. Todos os direitos reservados.</p>
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800 });
-  </script>
 </body>
-
 </html>
