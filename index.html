@@ -63,6 +63,7 @@
   </nav>
 
   <main>
+    <!-- Seção do Hero -->
     <div class="w-100 overflow-hidden bg-gray-100" id="top">
       <div class="container position-relative">
         <div class="row">
@@ -75,66 +76,73 @@
             <img src="pexels-photo-11162267.jpeg" class="img-fluid rounded shadow" alt="Fabrico alimentar">
           </div>
         </div>
+        <!-- Imagem de fundo do herói -->
+        <div class="position-absolute top-0 end-0 w-100 h-100" style="z-index: -1; background-image: url('img/webp/interior11.webp'); background-size: cover; background-position: center;"></div>
       </div>
     </div>
 
+    <!-- Produtos -->
     <div class="py-vh-5" id="produtos">
       <div class="container">
-        <h2 class="display-6 text-center mb-5">Produtos em Destaque</h2>
+        <h2 class="display-6 text-center mb-5" data-aos="fade-down">Produtos em Destaque</h2>
         <div class="row g-4">
           <div class="col-md-4" data-aos="zoom-in">
-            <img src="panko-breadcrumbs-2-1200.jpg" class="img-fluid rounded mb-3">
+            <img src="panko-breadcrumbs-2-1200.jpg" class="img-fluid rounded mb-3" alt="Farinha Panko Tradicional">
             <h5>Farinha Panko Tradicional</h5>
             <p>Ideal para panados crocantes e dourados.</p>
           </div>
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-            <img src="PeixeEmpanadoPanko-2.jpg" class="img-fluid rounded mb-3">
+            <img src="PeixeEmpanadoPanko-2.jpg" class="img-fluid rounded mb-3" alt="Peixe Empanado">
             <h5>Peixe Empanado</h5>
             <p>Sabor autêntico com textura perfeita.</p>
           </div>
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
-            <img src="Receita-de-Filé-de-frango-empanado.jpg" class="img-fluid rounded mb-3">
-            <h5>Frango Panado</h5>
-            <p>Uma opção nutritiva e deliciosa para o dia-a-dia.</p>
+            <img src="Receita-de-Filé-de-frango-empanado.jpg" class="img-fluid rounded mb-3" alt="Frango Empanado">
+            <h5>Frango Empanado</h5>
+            <p>Uma opção deliciosa para o dia a dia.</p>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Sobre Nós -->
     <div class="py-vh-5 bg-light" id="sobre">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6" data-aos="fade-right">
-            <img src="Ten-Don-15.jpg" class="img-fluid rounded shadow" alt="Ten Don">
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <img src="Ten-Don-15.jpg" class="img-fluid rounded shadow" alt="Sobre nós">
           </div>
-          <div class="col-lg-6" data-aos="fade-left">
+          <div class="col-md-6">
             <h3 class="mb-3">Quem Somos</h3>
-            <p>Desde 2022, a Crocgold atua no setor agroalimentar com foco na panificação, pastelaria e exportação de alimentos.</p>
-            <p>Unimos tradição portuguesa com inovação alimentar e responsabilidade ambiental.</p>
+            <p>Fundada em 2022, em Mujães, a Crocgold é uma empresa portuguesa dedicada à produção e exportação de produtos alimentares. Unimos tradição e inovação para levar o melhor da gastronomia portuguesa.</p>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Missão e Valores -->
     <div class="py-vh-5" id="valores">
       <div class="container text-center">
-        <h2 class="display-6">Missão e Valores</h2>
-        <p class="lead">Oferecer produtos autênticos com qualidade e sustentabilidade.</p>
-        <p class="lead">Ser uma referência no setor agroalimentar.</p>
-        <p class="lead">Qualidade | Sustentabilidade | Inovação | Rigor | Ética</p>
-        <img src="pexels-nadin-sh-14623904.jpg" class="img-fluid rounded mt-4 shadow" width="800">
+        <h2 class="display-6" data-aos="fade-down">Missão e Valores</h2>
+        <p class="lead" data-aos="fade-up">
+          Oferecer produtos autênticos com qualidade e sustentabilidade.<br>
+          Ser uma referência no setor agroalimentar.<br>
+          Qualidade | Sustentabilidade | Inovação | Rigor | Ética
+        </p>
+        <img src="pexels-nadin-sh-14623904.jpg" class="img-fluid rounded mt-4 shadow" width="800" alt="Missão e Valores" data-aos="fade-up" data-aos-delay="200">
       </div>
     </div>
 
-    <div class="py-vh-5 bg-light" id="sustentabilidade">
+    <!-- Sustentabilidade -->
+    <div class="py-vh-5 bg-gray-100" id="sustentabilidade">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6" data-aos="fade-right">
-            <img src="milho-e-fuba.jpg" class="img-fluid rounded shadow">
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <img src="milho-e-fuba.jpg" class="img-fluid rounded shadow" alt="Sustentabilidade">
           </div>
-          <div class="col-lg-6" data-aos="fade-left">
+          <div class="col-md-6">
             <h3 class="mb-3">Sustentabilidade</h3>
-            <ul>
+            <ul class="list-unstyled" data-aos="fade-up" data-aos-delay="200">
               <li>Redução do desperdício alimentar</li>
               <li>Uso eficiente de energia e água</li>
               <li>Embalagens recicláveis e biodegradáveis</li>
@@ -145,11 +153,16 @@
       </div>
     </div>
 
-    <div class="py-vh-5 text-light bg-dark text-center" id="contactos">
+    <!-- Contatos -->
+    <div class="py-vh-5 bg-dark text-light text-center" id="contactos">
       <div class="container">
-        <h2 class="mb-3">Contacte-nos</h2>
-        <p class="mb-4">📍 Rua Padre Manuel Lopes Vilaverde, 215<br>4905-513 Mujães, Viana do Castelo – Portugal<br>📧 contacto@crocgold.pt | 📞 +351 XXX XXX XXX</p>
-        <a href="mailto:contacto@crocgold.pt" class="btn btn-warning px-5 py-3">Enviar Email</a>
+        <h2 class="mb-3" data-aos="fade-up">Contacte-nos</h2>
+        <p class="mb-4" data-aos="fade-up" data-aos-delay="200">
+          📍 Rua Padre Manuel Lopes Vilaverde, 215<br>
+          4905-513 Mujães, Viana do Castelo – Portugal<br>
+          📧 contacto@crocgold.pt | 📞 +351 XXX XXX XXX
+        </p>
+        <a href="mailto:contacto@crocgold.pt" class="btn btn-warning px-5 py-3" data-aos="fade-up" data-aos-delay="400">Enviar Email</a>
       </div>
     </div>
   </main>
@@ -160,18 +173,21 @@
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/aos.js"></script>
-  <script>AOS.init({ duration: 800 });</script>
+  <script>
+    AOS.init({ duration: 800 });
+  </script>
   <script>
     let scrollpos = window.scrollY;
-    const header = document.querySelector(".navbar");
+    const header = document.querySelector('.navbar');
     const header_height = header.offsetHeight;
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
-    window.addEventListener('scroll', function () {
+    const add_class_on_scroll = () => header.classList.add('scrolled', 'shadow-sm');
+    const remove_class_on_scroll = () => header.classList.remove('scrolled', 'shadow-sm');
+    window.addEventListener('scroll', function() {
       scrollpos = window.scrollY;
       if (scrollpos >= header_height) add_class_on_scroll();
       else remove_class_on_scroll();
     });
   </script>
 </body>
+
 </html>
