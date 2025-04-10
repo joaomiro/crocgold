@@ -31,7 +31,6 @@
       font-display: swap;
       src: url('./fonts/inter-v12-latin-700.woff2') format('woff2');
     }
-
     .navbar {
       background-color: rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(10px);
@@ -45,7 +44,6 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navScroll">
-
   <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
       <a class="navbar-brand pe-4 fs-4" href="#">Crocgold</a>
@@ -56,6 +54,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#services">Produtos</a></li>
           <li class="nav-item"><a class="nav-link" href="#aboutus">Sobre nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="#valores">Valores</a></li>
           <li class="nav-item"><a class="nav-link" href="#sustentabilidade">Sustentabilidade</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contactos</a></li>
         </ul>
@@ -66,8 +65,9 @@
   <main>
     <div class="w-100 overflow-hidden bg-gray-100" id="top">
       <div class="container position-relative">
+        <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/webp/interior11.webp);"></div>
         <div class="row">
-          <div class="col-lg-7 py-vh-6 position-relative">
+          <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
             <h1 class="display-1 fw-bold mt-5">Bem-vindo à Crocgold Industry</h1>
             <p class="lead">Tradição, inovação e sabor na sua mesa.</p>
             <a href="#services" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">Conheça os produtos</a>
@@ -78,50 +78,90 @@
 
     <div class="py-vh-5 w-100 overflow-hidden" id="services">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <h2 class="display-6">Produtos com sabor, feitos para surpreender.</h2>
-            <p>Oferecemos uma vasta gama de produtos alimentares, com foco em panificação, pastelaria e valor acrescentado.</p>
+        <div class="row text-center">
+          <h2 class="display-6" data-aos="fade-down">Produtos com sabor, feitos para surpreender</h2>
+        </div>
+        <div class="row text-center py-vh-3" data-aos="fade-up">
+          <div class="col-md-4">
+            <div class="p-4 shadow rounded bg-white">
+              <img src="img/webp/interior42.webp" class="mb-3 rounded-circle" width="80">
+              <h5>Panificação</h5>
+              <p>Produzimos pães artesanais e industriais com qualidade e sabor.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 shadow rounded bg-white">
+              <img src="img/webp/people15.webp" class="mb-3 rounded-circle" width="80">
+              <h5>Pastelaria</h5>
+              <p>Receitas tradicionais com um toque moderno e nutritivo.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 shadow rounded bg-white">
+              <img src="img/webp/people4.webp" class="mb-3 rounded-circle" width="80">
+              <h5>Inovação Alimentar</h5>
+              <p>Desenvolvimento de produtos saudáveis para novas tendências.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
+    <div class="py-vh-5 w-100 overflow-hidden bg-light" id="aboutus">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="py-5 border-top border-dark">Quem Somos</h3>
-            <p>A Crocgold Industry, Lda é uma empresa portuguesa fundada em 2022, especializada em produtos de panificação e pastelaria. Aliamos tradição e tecnologia para levar o melhor da gastronomia portuguesa ao mundo.</p>
-            <p><strong>Visão:</strong> Ser referência no setor agroalimentar.</p>
-            <p><strong>Valores:</strong> Qualidade | Sustentabilidade | Inovação | Rigor | Ética</p>
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <img src="img/webp/interior11.webp" class="img-fluid rounded shadow" alt="fabrico">
+          </div>
+          <div class="col-md-6">
+            <h3 class="mb-3">Sobre nós</h3>
+            <p>Fundada em 2022, em Mujães, a Crocgold é uma empresa portuguesa dedicada à produção e exportação de produtos alimentares.</p>
+            <p>Somos movidos pela paixão de unir tradição com tecnologia, sempre com compromisso ambiental.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="py-vh-5 w-100 overflow-hidden bg-light" id="sustentabilidade">
+    <div class="py-vh-5 bg-gray-100 w-100 overflow-hidden" id="valores">
       <div class="container">
-        <h3 class="py-5 border-top border-dark">Sustentabilidade</h3>
-        <ul>
-          <li>Redução do desperdício alimentar</li>
-          <li>Uso eficiente de energia e água</li>
-          <li>Embalagens recicláveis e biodegradáveis</li>
-          <li>Fornecimento local e ético</li>
-        </ul>
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-6">Missão, Visão e Valores</h2>
+            <p class="lead">Produzimos com excelência, respeitamos as tradições, inovamos com responsabilidade.</p>
+            <ul class="list-unstyled">
+              <li><strong>Missão:</strong> Oferecer produtos autênticos com qualidade e sustentabilidade.</li>
+              <li><strong>Visão:</strong> Ser uma referência no setor agroalimentar.</li>
+              <li><strong>Valores:</strong> Qualidade, Sustentabilidade, Inovação, Rigor, Ética.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="py-vh-5 w-100 overflow-hidden" id="contact">
+    <div class="py-vh-5 w-100 overflow-hidden" id="sustentabilidade">
       <div class="container">
-        <h3 class="py-5 border-top border-dark">Contactos</h3>
-        <address>
-          Crocgold Industry, Lda<br>
-          Rua Padre Manuel Lopes Vilaverde, 215<br>
-          4905-513 Mujães, Viana do Castelo, Portugal<br>
-          Email: contacto@crocgold.pt<br>
-          Telefone: +351 XXX XXX XXX<br>
-        </address>
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <img src="img/webp/interior29.webp" class="img-fluid rounded shadow" alt="sustentabilidade">
+          </div>
+          <div class="col-md-6">
+            <h3>Sustentabilidade</h3>
+            <ul>
+              <li>Redução do desperdício alimentar</li>
+              <li>Uso eficiente de energia e água</li>
+              <li>Embalagens recicláveis e biodegradáveis</li>
+              <li>Fornecimento local e ético</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-vh-5 bg-gray-900 text-light text-center" data-aos="fade" id="contact">
+      <div class="container">
+        <h2 class="display-6">Vamos dar sabor ao futuro?</h2>
+        <p class="lead">Entre em contacto connosco para saber mais sobre os nossos produtos e soluções alimentares.</p>
+        <a href="mailto:contacto@crocgold.pt" class="btn btn-warning mt-3 px-5 py-3 shadow">Contactar</a>
       </div>
     </div>
   </main>
@@ -135,20 +175,22 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/aos.js"></script>
   <script>AOS.init({ duration: 800 });</script>
-
   <script>
-    let scrollpos = window.scrollY
-    const header = document.querySelector(".navbar")
-    const header_height = header.offsetHeight
+    let scrollpos = window.scrollY;
+    const header = document.querySelector(".navbar");
+    const header_height = header.offsetHeight;
 
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
 
     window.addEventListener('scroll', function () {
       scrollpos = window.scrollY;
-      if (scrollpos >= header_height) { add_class_on_scroll() }
-      else { remove_class_on_scroll() }
-    })
+      if (scrollpos >= header_height) {
+        add_class_on_scroll();
+      } else {
+        remove_class_on_scroll();
+      }
+    });
   </script>
 </body>
 </html>
