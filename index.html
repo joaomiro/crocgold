@@ -1,192 +1,133 @@
 <!doctype html>
-<html class="h-100" lang="pt">
+<html lang="pt">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="Crocgold Industry - Tradição, inovação e sabor na sua mesa.">
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <meta name="author" content="Crocgold Industry">
-  <title>Crocgold Industry</title>
+  <title>CrocGold</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/theme.min.css">
+  <link rel="icon" href="croc_site/sushi.webp">
   <style>
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url('./fonts/inter-v12-latin-300.woff2') format('woff2');
+    body {
+      font-family: 'Inter', sans-serif;
     }
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url('./fonts/inter-v12-latin-500.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url('./fonts/inter-v12-latin-700.woff2') format('woff2');
-    }
-    .navbar {
-      background-color: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-    .navbar.scrolled {
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    .hero-img {
+      background-image: url('croc_site/panko-chicken-breast-on-platter.webp');
+      background-size: cover;
+      background-position: center;
     }
   </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navScroll">
-  <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top">
+  <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
     <div class="container">
-      <a class="navbar-brand pe-4 fs-4" href="#">Crocgold</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre nós</a></li>
-          <li class="nav-item"><a class="nav-link" href="#valores">Missão e Valores</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sustentabilidade">Sustentabilidade</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contactos">Contactos</a></li>
-        </ul>
-      </div>
+      <a class="navbar-brand pe-4 fs-4" href="#">
+        <img src="croc_site/sushi.webp" alt="Logo" width="40" height="40" class="rounded-circle me-2">
+        <span class="fw-bold">CrocGold</span>
+      </a>
     </div>
   </nav>
 
   <main>
-    <!-- Seção do Hero -->
-    <div class="w-100 overflow-hidden bg-gray-100" id="top">
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-lg-6 py-vh-5" data-aos="fade-right">
-            <h1 class="display-4 fw-bold">Tradição, Inovação e Sabor</h1>
-            <p class="lead">Na Crocgold combinamos saber-fazer artesanal com tecnologia para produtos autênticos e sustentáveis.</p>
-            <a href="#produtos" class="btn btn-dark btn-lg mt-3">Ver Produtos</a>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left">
-            <img src="pexels-photo-11162267.jpeg" class="img-fluid rounded shadow" alt="Fabrico alimentar">
-          </div>
-        </div>
-        <!-- Imagem de fundo do herói -->
-        <div class="position-absolute top-0 end-0 w-100 h-100" style="z-index: -1; background-image: url('img/webp/interior11.webp'); background-size: cover; background-position: center;"></div>
-      </div>
-    </div>
-
-    <!-- Produtos -->
-    <div class="py-vh-5" id="produtos">
+    <header class="vh-100 d-flex align-items-center hero-img text-white text-center">
       <div class="container">
-        <h2 class="display-6 text-center mb-5" data-aos="fade-down">Produtos em Destaque</h2>
-        <div class="row g-4">
-          <div class="col-md-4" data-aos="zoom-in">
-            <img src="panko-breadcrumbs-2-1200.jpg" class="img-fluid rounded mb-3" alt="Farinha Panko Tradicional">
-            <h5>Farinha Panko Tradicional</h5>
-            <p>Ideal para panados crocantes e dourados.</p>
-          </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-            <img src="PeixeEmpanadoPanko-2.jpg" class="img-fluid rounded mb-3" alt="Peixe Empanado">
-            <h5>Peixe Empanado</h5>
-            <p>Sabor autêntico com textura perfeita.</p>
-          </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
-            <img src="Receita-de-Filé-de-frango-empanado.jpg" class="img-fluid rounded mb-3" alt="Frango Empanado">
-            <h5>Frango Empanado</h5>
-            <p>Uma opção deliciosa para o dia a dia.</p>
-          </div>
-        </div>
+        <h1 class="display-2 fw-bold">Sabor crocante, qualidade dourada.</h1>
+        <p class="lead mt-4">Especialistas em panko e empanados com tradição e inovação.</p>
       </div>
-    </div>
+    </header>
 
-    <!-- Sobre Nós -->
-    <div class="py-vh-5 bg-light" id="sobre">
-      <div class="container">
-        <div class="row align-items-center" data-aos="fade-up">
-          <div class="col-md-6">
-            <img src="Ten-Don-15.jpg" class="img-fluid rounded shadow" alt="Sobre nós">
-          </div>
-          <div class="col-md-6">
-            <h3 class="mb-3">Quem Somos</h3>
-            <p>Fundada em 2022, em Mujães, a Crocgold é uma empresa portuguesa dedicada à produção e exportação de produtos alimentares. Unimos tradição e inovação para levar o melhor da gastronomia portuguesa.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Missão e Valores -->
-    <div class="py-vh-5" id="valores">
+    <section class="py-5" id="missao">
       <div class="container text-center">
-        <h2 class="display-6" data-aos="fade-down">Missão e Valores</h2>
-        <p class="lead" data-aos="fade-up">
+        <h2 class="display-5 fw-bold mb-4">Missão</h2>
+        <p class="lead">
           Oferecer produtos autênticos com qualidade e sustentabilidade.<br>
           Ser uma referência no setor agroalimentar.<br>
-          Qualidade | Sustentabilidade | Inovação | Rigor | Ética
+          <strong>Qualidade, Sustentabilidade, Inovação, Rigor, Ética.</strong>
         </p>
-        <img src="pexels-nadin-sh-14623904.jpg" class="img-fluid rounded mt-4 shadow" width="800" alt="Missão e Valores" data-aos="fade-up" data-aos-delay="200">
       </div>
-    </div>
+    </section>
 
-    <!-- Sustentabilidade -->
-    <div class="py-vh-5 bg-gray-100" id="sustentabilidade">
+    <section class="py-5 bg-light" id="produtos">
       <div class="container">
-        <div class="row align-items-center" data-aos="fade-up">
-          <div class="col-md-6">
-            <img src="milho-e-fuba.jpg" class="img-fluid rounded shadow" alt="Sustentabilidade">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Os nossos produtos</h2>
+          <p class="text-muted">Uma seleção crocante de excelência</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <img src="croc_site/PeixeEmpanadoPanko-2.webp" class="img-fluid rounded shadow" alt="Peixe empanado">
+            <h5 class="mt-3 text-center">Peixe Empanado</h5>
           </div>
-          <div class="col-md-6">
-            <h3 class="mb-3">Sustentabilidade</h3>
-            <ul class="list-unstyled" data-aos="fade-up" data-aos-delay="200">
-              <li>Redução do desperdício alimentar</li>
-              <li>Uso eficiente de energia e água</li>
-              <li>Embalagens recicláveis e biodegradáveis</li>
-              <li>Fornecimento local e ético</li>
-            </ul>
+          <div class="col-md-4">
+            <img src="croc_site/Receita-de-Filé-de-frango-empanado.webp" class="img-fluid rounded shadow" alt="Frango empanado">
+            <h5 class="mt-3 text-center">Frango Crocante</h5>
+          </div>
+          <div class="col-md-4">
+            <img src="croc_site/crispy-panko-baked-eggplant-tenders_2sm.webp" class="img-fluid rounded shadow" alt="Beringela empanada">
+            <h5 class="mt-3 text-center">Veggie Crunch</h5>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Contatos -->
-    <div class="py-vh-5 bg-dark text-light text-center" id="contactos">
+    <section class="py-5" id="processo">
       <div class="container">
-        <h2 class="mb-3" data-aos="fade-up">Contacte-nos</h2>
-        <p class="mb-4" data-aos="fade-up" data-aos-delay="200">
-          📍 Rua Padre Manuel Lopes Vilaverde, 215<br>
-          4905-513 Mujães, Viana do Castelo – Portugal<br>
-          📧 contacto@crocgold.pt | 📞 +351 XXX XXX XXX
-        </p>
-        <a href="mailto:contacto@crocgold.pt" class="btn btn-warning px-5 py-3" data-aos="fade-up" data-aos-delay="400">Enviar Email</a>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h2 class="fw-bold">Do milho ao panko</h2>
+            <p class="text-muted">
+              O nosso processo combina tradição com tecnologia para garantir uma textura crocante inigualável. Desde a escolha do grão até à embalagem final, tudo é pensado para levar o melhor até si.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img src="croc_site/diferenca-entre-fuba-farinha-milho.webp" class="img-fluid rounded shadow" alt="Farinha de milho">
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="py-5 bg-light" id="galeria">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="display-6 fw-bold">Galeria</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3 col-6">
+            <img src="croc_site/panko-breadcrumbs-2-1200.webp" class="img-fluid rounded shadow" alt="Panko">
+          </div>
+          <div class="col-md-3 col-6">
+            <img src="croc_site/pexels-photo-6607320.webp" class="img-fluid rounded shadow" alt="Panko detalhe">
+          </div>
+          <div class="col-md-3 col-6">
+            <img src="croc_site/fried-fish-fillet-sliced-steak-1699742.webp" class="img-fluid rounded shadow" alt="Fish fillet">
+          </div>
+          <div class="col-md-3 col-6">
+            <img src="croc_site/pexels-nadin-sh-14623904.webp" class="img-fluid rounded shadow" alt="Empanado gourmet">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="contacto">
+      <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Vamos trabalhar juntos?</h2>
+        <p class="mb-4">Entre em contacto connosco para parcerias, encomendas ou dúvidas.</p>
+        <a href="mailto:info@crocgold.pt" class="btn btn-warning btn-lg px-4 shadow">Contactar</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="bg-light text-center py-3 small">
-    &copy; 2025 Crocgold Industry. Todos os direitos reservados.
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 CrocGold. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/aos.js"></script>
   <script>
     AOS.init({ duration: 800 });
-  </script>
-  <script>
-    let scrollpos = window.scrollY;
-    const header = document.querySelector('.navbar');
-    const header_height = header.offsetHeight;
-    const add_class_on_scroll = () => header.classList.add('scrolled', 'shadow-sm');
-    const remove_class_on_scroll = () => header.classList.remove('scrolled', 'shadow-sm');
-    window.addEventListener('scroll', function() {
-      scrollpos = window.scrollY;
-      if (scrollpos >= header_height) add_class_on_scroll();
-      else remove_class_on_scroll();
-    });
   </script>
 </body>
 
