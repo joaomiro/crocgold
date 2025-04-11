@@ -46,6 +46,35 @@
        url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+.gallery-image {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsivo para ecrãs maiores */
+@media (min-width: 768px) {
+  .gallery-image {
+    width: 240px;
+    height: 160px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-image {
+    width: 300px;
+    height: 200px;
+  }
+}
 
 </style>
 
