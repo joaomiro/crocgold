@@ -283,8 +283,7 @@
 </div>
 
   </div>
-</div>
-
+<!-- GALERIA -->
 <div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
   <div class="container-fluid">
     <div class="row overflow-scroll">
@@ -308,6 +307,11 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img src="" alt="Imagem ampliada">
 </div>
 
 </div>
@@ -667,6 +671,23 @@ Somos muito mais do que uma simples fábrica de alimentos.</h2>
     console.log(scrollpos)
   })
 </script>
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img src="" alt="Imagem ampliada">
+</div>
+    <script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector("img");
 
+  document.querySelectorAll('.gallery-image').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("show");
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("show");
+  }
+</script>
   </body>
 </html>
