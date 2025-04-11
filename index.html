@@ -167,70 +167,58 @@
 
 
 <style>
-  .scroll-snap-x {
+  #gallery-scroll {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+    overflow-x: auto;
+    display: flex;
+    gap: 1.5rem; /* espaço entre imagens */
+    padding: 2rem 1rem;
   }
 
-  .scroll-snap-x > div {
+  #gallery-scroll > div {
+    flex-shrink: 0;
     scroll-snap-align: start;
+  }
+
+  @media (max-width: 768px) {
+    #gallery-scroll {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #gallery-scroll > div {
+      width: 100%;
+      max-width: 300px;
+    }
   }
 </style>
 
 <div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-
-        <div class="d-flex flex-row flex-nowrap overflow-auto py-vh-5 scroll-snap-x">
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up">
-            <img src="img/frango_panko.jpg" class="rounded shadow img-fluid" alt="nice gallery image">
-          </div>
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/sushi_1.jpg" class="rounded shadow img-fluid" alt="nice gallery image">
-          </div>
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/webp/crispy-panko-baked-eggplant-tenders_2sm.webp" class="rounded shadow img-fluid" alt="nice gallery image">
-          </div>
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up" data-aos-delay="600">
-            <img src="img/webp/ten-don-15.webp" class="rounded shadow img-fluid" alt="nice gallery image">
-          </div>
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up" data-aos-delay="800">
-            <img src="img/webp/receita-de-fil'e-de-frango-empanado.webp" class="rounded shadow img-fluid" alt="nice gallery image">
-          </div>
-
-          <!-- Duplicados -->
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up" data-aos-delay="1000">
-            <img src="img/frango_panko.jpg" class="rounded shadow img-fluid" alt="duplicate image">
-          </div>
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up" data-aos-delay="1200">
-            <img src="img/sushi_1.jpg" class="rounded shadow img-fluid" alt="duplicate image">
-          </div>
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up" data-aos-delay="1400">
-            <img src="img/webp/crispy-panko-baked-eggplant-tenders_2sm.webp" class="rounded shadow img-fluid" alt="duplicate image">
-          </div>
-
-          <div class="flex-shrink-0 mb-3 me-4" data-aos="fade-up" data-aos-delay="1600">
-            <img src="img/webp/ten-don-15.webp" class="rounded shadow img-fluid" alt="duplicate image">
-          </div>
-
-          <!-- Última imagem sem margem à direita -->
-          <div class="flex-shrink-0 mb-3" data-aos="fade-up" data-aos-delay="1800">
-            <img src="img/webp/receita-de-fil'e-de-frango-empanado.webp" class="rounded shadow img-fluid" alt="duplicate image">
-          </div>
-
-        </div>
-
+    <div id="gallery-scroll">
+      
+      <div data-aos="fade-up">
+        <img src="img/frango_panko.jpg" class="rounded shadow img-fluid" alt="galeria">
       </div>
+
+      <div data-aos="fade-up" data-aos-delay="200">
+        <img src="img/sushi_1.jpg" class="rounded shadow img-fluid" alt="galeria">
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="400">
+        <img src="img/webp/crispy-panko-baked-eggplant-tenders_2sm.webp" class="rounded shadow img-fluid" alt="galeria">
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="600">
+        <img src="img/webp/ten-don-15.webp" class="rounded shadow img-fluid" alt="galeria">
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="800">
+        <img src="img/webp/receita-de-fil'e-de-frango-empanado.webp" class="rounded shadow img-fluid" alt="galeria">
+      </div>
+
     </div>
   </div>
 </div>
