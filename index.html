@@ -738,73 +738,61 @@ Somos muito mais do que uma simples fábrica de alimentos.</h2>
   <img src="" alt="Imagem ampliada">
 </div>
     <script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = lightbox.querySelector("img");
+ const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector("img");
+const images = document.querySelectorAll('.gallery-image');
+let currentIndex = 0;
 
-  document.querySelectorAll('.gallery-image').forEach(img => {
+images.forEach((img, index) => {
     img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.add("show");
+        currentIndex = index;
+        showImage(currentIndex);
     });
-  });
+});
 
-  function closeLightbox() {
-    lightbox.classList.remove("show");
-  }
-      const lightbox = document.getElementById("lightbox");
-  const lightboxImg = lightbox.querySelector("img");
-  const images = document.querySelectorAll('.gallery-image');
-  let currentIndex = 0;
-
-  images.forEach((img, index) => {
-    img.addEventListener('click', () => {
-      currentIndex = index;
-      showImage(currentIndex);
-    });
-  });
-
-  function showImage(index) {
+function showImage(index) {
     lightboxImg.src = images[index].src;
     lightbox.classList.add("show");
     document.body.style.overflow = "hidden";
-  }
+}
 
-  function closeLightbox() {
+function closeLightbox() {
     lightbox.classList.remove("show");
     document.body.style.overflow = "";
-  }
+}
 
-  document.getElementById("prevBtn").addEventListener("click", (e) => {
+document.getElementById("prevBtn").addEventListener("click", (e) => {
     e.stopPropagation();
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
-  });
+});
 
-  document.getElementById("nextBtn").addEventListener("click", (e) => {
+document.getElementById("nextBtn").addEventListener("click", (e) => {
     e.stopPropagation();
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
-  });
-
-  lightbox.addEventListener("click", closeLightbox);
-      document.addEventListener("keydown", (e) => {
-  
-        if (!lightbox.classList.contains("show")) return;
-
-  switch (e.key) {
-    case "ArrowRight":
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-      break;
-    case "ArrowLeft":
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
-      break;
-    case "Escape":
-      closeLightbox();
-      break;
-  }
 });
+
+lightbox.addEventListener("click", closeLightbox);
+
+document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("show")) return;
+
+    switch (e.key) {
+        case "ArrowRight":
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+            break;
+        case "ArrowLeft":
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+            break;
+        case "Escape":
+            closeLightbox();
+            break;
+    }
+});
+
 </script>
   </body>
 </html>
