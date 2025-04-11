@@ -106,6 +106,27 @@
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 10000;
+  transition: 0.3s ease;
+}
+
+#prevBtn { left: 2%; }
+#nextBtn { right: 2%; }
+
+.lightbox-btn:hover {
+  color: #fdd835;
+  transform: translateY(-50%) scale(1.1);
+}
 </style>
 
   </head>
@@ -313,6 +334,8 @@
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img src="" alt="Imagem ampliada">
 </div>
+<button id="prevBtn" class="lightbox-btn" aria-label="Imagem anterior">&#10094;</button>
+<button id="nextBtn" class="lightbox-btn" aria-label="Imagem seguinte">&#10095;</button>
 
 </div>
 
@@ -688,6 +711,60 @@ Somos muito mais do que uma simples fábrica de alimentos.</h2>
   function closeLightbox() {
     lightbox.classList.remove("show");
   }
+      const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+  const images = document.querySelectorAll('.gallery-image');
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      showImage(currentIndex);
+    });
+  });
+
+  function showImage(index) {
+    lightboxImg.src = images[index].src;
+    lightbox.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+
+  document.getElementById("prevBtn").addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  document.getElementById("nextBtn").addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  lightbox.addEventListener("click", closeLightbox);
+      document.addEventListener("keydown", (e) => {
+  
+        if (!lightbox.classList.contains("show")) return;
+
+  switch (e.key) {
+    case "ArrowRight":
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+      break;
+    case "ArrowLeft":
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+      break;
+    case "Escape":
+      closeLightbox();
+      break;
+  }
+});
 </script>
   </body>
 </html>
