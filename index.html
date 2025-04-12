@@ -1,29 +1,19 @@
 <!doctype html>
 <html lang="pt" class="h-100">
-  <head>
-  <!-- Metadados básicos para dispositivos e SEO -->
+  <html lang="pt" class="h-100">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <meta name="description" content="Componentes prontos a usar com Bootstrap 5">
   <meta name="author" content="Holger Koenemann">
   <meta name="generator" content="Eleventy v2.0.0">
   <meta name="HandheldFriendly" content="true">
-  <title>Website da Crocgold Industry</title>
+  <title>Crocgold Industry, Lda</title>
 
-  <!-- Ícones de aplicação e favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
-
-  <!-- Ficheiro principal de estilos Bootstrap -->
   <link rel="stylesheet" href="css/theme.min.css">
-
-  <!-- Estilos personalizados da Crocgold (galeria, lightbox, etc.) -->
   <link rel="stylesheet" href="css/custom.css">
 
-    
- <style>
+  <style>
 
 /* =============================
    Fontes Inter - Peso 300, 500, 700
@@ -68,6 +58,7 @@
   border-radius: 0.5rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  scroll-snap-align: start; /* NOVO: alinhamento suave no scroll */
 }
 
 /* Efeito de zoom ao passar o rato */
@@ -75,9 +66,7 @@
   transform: scale(1.05);
 }
 
-/* =============================
-   Responsividade: tablets (>= 768px)
-   ============================= */
+/* Responsividade: tablets (>= 768px) */
 @media (min-width: 768px) {
   .gallery-image {
     width: 240px;
@@ -85,16 +74,12 @@
   }
 }
 
-/* =============================
-   Responsividade: desktop (>= 992px)
-   Aumenta altura da secção e imagens
-   para melhor apresentação em ecrãs maiores
-   ============================= */
+/* Responsividade: desktop (>= 992px) */
 @media (min-width: 992px) {
   #gallery {
-    min-height: 60vh;         /* garante que a galeria ocupa pelo menos 60% da altura da janela */
-    padding-top: 6rem;         /* espaçamento superior */
-    padding-bottom: 6rem;      /* espaçamento inferior */
+    min-height: 60vh;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   #gallery .gallery-image {
@@ -103,10 +88,7 @@
   }
 }
 
-/* =============================
-   Responsividade: ecrãs muito grandes (>= 1400px)
-   Aumenta ainda mais a altura das imagens
-   ============================= */
+/* Responsividade: ecrãs muito grandes (>= 1400px) */
 @media (min-width: 1400px) {
   #gallery .gallery-image {
     height: 260px;
@@ -129,7 +111,6 @@
   z-index: 9999;
 }
 
-/* Imagem ampliada dentro da lightbox */
 .lightbox img {
   max-width: 90%;
   max-height: 90%;
@@ -138,21 +119,16 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Mostrar lightbox */
 .lightbox.show {
   display: flex;
   cursor: zoom-out;
 }
 
-/* Animação de fade in */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
 
-/* =============================
-   Botões de navegação da lightbox
-   ============================= */
 .lightbox-btn {
   position: absolute;
   top: 50%;
@@ -174,9 +150,71 @@
   color: #fdd835;
   transform: translateY(-50%) scale(1.1);
 }
-   #top {
+
+/* =============================
+   Ajustes para mobile
+   ============================= */
+@media (max-width: 576px) {
+  .py-vh-5, .py-vh-6 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 1rem 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .btn, .form-control {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  .display-1, .display-2 {
+    font-size: 2.2rem !important;
+  }
+
+  h2.display-6 {
+    font-size: 1.5rem !important;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 80%;
+  }
+
+  .lightbox-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
+/* =============================
+   Ajustes extras
+   ============================= */
+.gallery-container {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+#top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#top .position-relative.z-index-1 {
+  z-index: 2;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+#top {
   padding-top: var(--bs-navbar-height, 70px);
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -184,81 +222,59 @@ html {
 section[id] {
   scroll-margin-top: 100px;
 }
+
 </style>
 </head>
 
-<nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm" tabindex="0">
-  <div class="container">
-
-    <!-- Logotipo (link para o topo) -->
-    <a class="navbar-brand" href="#top">
-      <img src="img/croc_logo.png" alt="Crocgold Industry" height="64">
-    </a>
-
-    <!-- Botão do menu (mobile) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Alternar navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Links da navbar -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link" href="#aboutus">Qualidade</a></li>
-        <li class="nav-item"><a class="nav-link" href="#numbers">Logística</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
-        <li class="nav-item"><a class="nav-link" href="#workwithus">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="#testimonials">Identidade</a></li>
-        <li class="nav-item"><a class="nav-link" href="#identidade">Sustentabilidade</a></li>
-      </ul>
-
-      <!-- Link para Catálogo -->
-      <a href="https://catalogo" class="link-dark pb-1 link-fancy me-2">
-        Catálogo
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-             fill="currentColor" class="bi bi-download ms-1" viewBox="0 0 16 16">
-          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-        </svg>
+<!-- NAVIGATION BAR -->
+  <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm" tabindex="0">
+    <div class="container">
+      <a class="navbar-brand" href="#top">
+        <img src="img/croc_logo.png" alt="Crocgold Industry" height="64">
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aboutus">Qualidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="#numbers">Logística</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="#workwithus">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Identidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="#identidade">Sustentabilidade</a></li>
+        </ul>
+        <a href="https://catalogo" class="link-dark pb-1 link-fancy me-2">
+          Catálogo
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+               fill="currentColor" class="bi bi-download ms-1" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+        </a>
+      </div>
     </div>
+  </nav>
 
-  </div>
-</nav>
-
-    <!-- Conteúdo principal -->
-    <main>
-<!-- Secção de boas-vindas -->
-<div class="w-100 overflow-hidden bg-gray-100 position-relative" id="top" style="min-height: 100vh; padding-top: 70px;">
-
-  <!-- Imagem de fundo com animação -->
-  <div class="position-absolute top-0 start-0 w-100 h-100 bg-cover"
-       style="background-image: url('img/tiposfarinhas.jpg'); background-position: center; z-index: 0;"
-       data-aos="fade-left">
-  </div>
-
-  <!-- Conteúdo sobre a imagem -->
-  <div class="position-relative z-index-1 d-flex justify-content-center align-items-center" style="min-height: 40vh;">
-    <img src="img/croc_logo.png" alt="Crocgold" class="img-fluid" style="max-width: 200px; height: auto;">
-  </div>
-
-</div>
-
-  <!-- Conteúdo por cima da imagem -->
-  <div class="container position-relative" style="z-index: 1;">
-    <div class="row">
-      <div class="col-lg-7 py-vh-6" data-aos="fade-up">
-        <!-- Caixa com fundo branco translúcido -->
-        <div style="background: rgba(255, 255, 255, 0.5); padding: 2rem; border-radius: 0.2rem;">
-          <h1 class="display-1 fw-bold mt-3">Bem-vindo à <img src="caminho/para/logo.png" alt="Crocgold" style="height: 60px;" /></h1>
-          <p class="lead">Delicie-se com a seleção de produtos, conheça a nossa história e descubra como inovar no setor alimentar!</p>
+  <!-- GALERIA COM SCROLL SNAP -->
+  <div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
+    <div class="container-fluid">
+      <div class="row overflow-scroll">
+        <div class="col-12">
+          <div class="d-flex flex-row overflow-auto px-5 py-vh-5 gallery-container">
+            <img src="img/frango_panko.jpg" class="gallery-image" alt="Frango panko">
+            <img src="img/sushi_1.jpg" class="gallery-image" alt="Sushi">
+            <img src="img/webp/crispy-panko-baked-eggplant-tenders_2sm.webp" class="gallery-image" alt="Beringela panada">
+            <img src="img/webp/ten-don-15.webp" class="gallery-image" alt="Ten Don">
+            <img src="img/webp/receita-de-fil'e-de-frango-empanado.webp" class="gallery-image" alt="Frango empanado">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 <!-- Espaçador invisível para evitar que o conteúdo fique escondido atrás da navbar -->
 <div style="position: relative;">
