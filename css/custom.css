@@ -12,17 +12,15 @@
   max-height: 120px;
   width: auto;
 }
-
 @media (max-width: 576px) {
   .logo-flex {
     max-height: 80px;
   }
 }
 .logo-flex2 {
-  max-height: 200px;
+  max-height: 300px;
   width: auto;
 }
-
 @media (max-width: 576px) {
   .logo-flex2 {
     max-height: 80px;
