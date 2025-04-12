@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joaomiro.github.io/crocgold/sitemap.xml
