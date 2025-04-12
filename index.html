@@ -65,21 +65,27 @@
 </nav>
 
 <!-- Secção de boas-vindas -->
-<section id="top" class="position-relative w-100 d-flex align-items-center" style="min-height: 100vh; background: url('img/tiposfarinhas.jpg') no-repeat center center / cover;">
-  <div class="container position-relative" style="z-index: 10;">
+<div class="w-100 overflow-hidden bg-gray-100 position-relative" id="top" style="min-height: 100vh; padding-top: 70px;">
+  <!-- Imagem de fundo com animação -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-cover"
+       style="background-image: url('img/tiposfarinhas.jpg'); background-position: center; z-index: 0;"
+       data-aos="fade-left">
+  </div>
+
+  <!-- Conteúdo por cima da imagem -->
+  <div class="container position-relative" style="z-index: 1;">
     <div class="row">
-      <div class="col-md-8 col-lg-6">
-        <!-- Remover a sobreposição escura e fundo transparente para o bloco de texto -->
-        <div class="p-5 rounded" style="background-color: transparent; box-shadow: none;" data-aos="fade-up">
-          <h1 class="display-3 fw-bold text-dark">Bem-vindo à Crocgold</h1>
-          <p class="lead mt-3 text-dark">
-            Delicie-se com a seleção de produtos, conheça a nossa história e descubra como inovar no setor alimentar!
-          </p>
+      <div class="col-lg-7 py-vh-6" data-aos="fade-up">
+        <!-- Caixa com fundo branco translúcido -->
+        <div style="background: rgba(255, 255, 255, 0.5); padding: 2rem; border-radius: 0.2rem;">
+          <h1 class="display-1 fw-bold mt-3">Bem-vindo à Crocgold</h1>
+          <p class="lead">Delicie-se com a seleção de produtos, conheça a nossa história e descubra como inovar no setor alimentar!</p>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+
 
 <!-- Espaçador invisível para evitar que o conteúdo fique escondido atrás da navbar -->
 <div style="position: relative;">
