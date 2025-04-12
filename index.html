@@ -320,21 +320,27 @@ html {
   <span id="aboutus" style="position: absolute; top: -90px;"></span>
 </div>
 <!-- Secção de Qualidade -->
-<div class="py-vh-5 bg-gray-100 w-100 overflow-hidden">
+<div class="py-vh-5 bg-gray-100 w-100 overflow-hidden" id="aboutus">
   <div class="container">
     <div class="row d-flex justify-content-between align-items-center">
       
       <!-- Coluna das imagens -->
       <div class="col-lg-6" data-aos="fade-right">
-        <div class="row gx-3">
-          <div class="col-12 mb-4">
-            <div class="ratio ratio-16x9 rounded bg-cover shadow" style="background-image: url('img/exemplos_farinha.jpg');"></div>
+        <div class="row gx-4 d-flex">
+          <div class="col-md-11">
+            <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center" 
+                 style="background-image: url('img/exemplos_farinha.jpg'); --bs-aspect-ratio: 50%;">
+            </div>
           </div>
-          <div class="col-6">
-            <div class="ratio ratio-1x1 rounded bg-cover shadow" style="background-image: url('img/milho.jpg');"></div>
+          <div class="col-md-5 offset-md-1">
+            <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" 
+                 style="background-image: url('img/milho.jpg');">
+            </div>
           </div>
-          <div class="col-6">
-            <div class="ratio ratio-1x1 rounded bg-cover shadow" style="background-image: url('img/panko-breadcrumbs-2-1200.jpg');"></div>
+          <div class="col-md-6">
+            <div class="shadow ratio rounded bg-cover mt-5 bp-center" 
+                 style="background-image: url('img/panko-breadcrumbs-2-1200.jpg'); --bs-aspect-ratio: 150%;">
+            </div>
           </div>
         </div>
       </div>
