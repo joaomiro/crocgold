@@ -18,3 +18,13 @@
     max-height: 80px;
   }
 }
+.logo-flex2 {
+  max-height: auto;
+  width: 200px;
+}
+
+@media (max-width: 576px) {
+  .logo-flex2 {
+    max-height: 80px;
+  }
+}
