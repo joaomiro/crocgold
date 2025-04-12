@@ -177,7 +177,9 @@
    #top {
   padding-top: var(--bs-navbar-height, 70px);
 }
-
+  html {
+    scroll-behavior: smooth;
+  }
 </style>
 </head>
 
@@ -188,6 +190,21 @@
     <!-- Só o logotipo -->
     <a class="navbar-brand" href="/">
       <img src="img/croc_logo.png" alt="Crocgold Industry" height="62">
+    </a>
+
+    <!-- Botão mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <!-- Navbar -->
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
+  <div class="container">
+
+    <!-- Logotipo como botão "Home" -->
+    <a class="navbar-brand" href="#top">
+      <img src="img/croc_logo.png" alt="Crocgold Industry" height="56">
     </a>
 
     <!-- Botão mobile -->
@@ -219,6 +236,7 @@
     </div>
   </div>
 </nav>
+
 
 
     <!-- Conteúdo principal -->
