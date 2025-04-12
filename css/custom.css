@@ -23,7 +23,7 @@
   width: auto;
 }
 
-@media (max-width: auto) {
+@media (max-width: 576px) {
   .logo-flex2 {
     max-height: 80px;
   }
