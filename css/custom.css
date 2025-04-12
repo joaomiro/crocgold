@@ -19,11 +19,11 @@
   }
 }
 .logo-flex2 {
-  max-height: auto;
-  width: 200px;
+  max-height: 200px;
+  width: auto;
 }
 
-@media (max-width: 576px) {
+@media (max-width: auto) {
   .logo-flex2 {
     max-height: 80px;
   }
