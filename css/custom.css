@@ -28,3 +28,6 @@ logo-maior {
     max-height: 80px;
   }
 }
+.text-justify {
+  text-align: justify;
+}
