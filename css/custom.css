@@ -17,12 +17,14 @@
     max-height: 80px;
   }
 }
-.logo-flex2 {
-  max-height: 300px;
+
+logo-maior {
+  max-height: 250x;
   width: auto;
 }
+
 @media (max-width: 576px) {
-  .logo-flex2 {
+  logo-maior {
     max-height: 80px;
   }
 }
