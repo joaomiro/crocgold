@@ -238,50 +238,60 @@ html {
 section[id] {
   scroll-margin-top: 100px;
 }
+  scroll-behavior: smooth;
+}
 
 </style>
 </head>
 
-<!-- NAVIGATION BAR -->
-  <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm" tabindex="0">
-    <div class="container">
-      <a class="navbar-brand" href="#top">
-        <img src="img/croc_logo.png" alt="Crocgold Industry" height="64">
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm" tabindex="0">
+  <div class="container">
+    <a class="navbar-brand" href="#top">
+      <img src="img/croc_logo.png" alt="Crocgold Industry" height="64">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#aboutus">Qualidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="#numbers">Logística</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#workwithus">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Identidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="#identidade">Sustentabilidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+      </ul>
+      <a href="https://catalogo" class="link-dark pb-1 link-fancy me-2">
+        Catálogo
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+             fill="currentColor" class="bi bi-download ms-1" viewBox="0 0 16 16">
+          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+        </svg>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-              aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="#aboutus">Qualidade</a></li>
-          <li class="nav-item"><a class="nav-link" href="#numbers">Logística</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
-          <li class="nav-item"><a class="nav-link" href="#workwithus">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Identidade</a></li>
-          <li class="nav-item"><a class="nav-link" href="#identidade">Sustentabilidade</a></li>
-        </ul>
-        <a href="https://catalogo" class="link-dark pb-1 link-fancy me-2">
-          Catálogo
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-               fill="currentColor" class="bi bi-download ms-1" viewBox="0 0 16 16">
-            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-          </svg>
-        </a>
-      </div>
     </div>
-  </nav>
-  
-<!-- Secção de boas-vindas -->
-<div class="w-100 overflow-hidden bg-gray-100 position-relative" id="top" style="min-height: 100vh; padding-top: 70px;">
-  <!-- Imagem de fundo com animação -->
-  <div class="position-absolute top-0 start-0 w-100 h-100 bg-cover"
-       style="background-image: url('img/tiposfarinhas.jpg'); background-position: center; z-index: 0;"
-       data-aos="fade-left">
   </div>
+</nav>
+
+  
+<section id="top" class="position-relative w-100 text-white d-flex align-items-center justify-content-center" style="min-height: 100vh; background: url('img/tiposfarinhas.jpg') no-repeat center center / cover;">
+  <!-- Overlay escura -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.3); z-index: 1;"></div>
+
+  <!-- Conteúdo -->
+  <div class="container position-relative z-index-2 text-center">
+    <h1 class="display-1 fw-bold" data-aos="fade-up">Bem-vindo à Crocgold</h1>
+    <p class="lead fs-4 mt-3" data-aos="fade-up" data-aos-delay="200">
+      Tradição, qualidade e inovação – diretamente de Viana do Castelo.
+    </p>
+    <a href="#aboutus" class="btn btn-light mt-4 px-5 py-3 fw-bold" data-aos="fade-up" data-aos-delay="400">
+      Saber mais
+    </a>
+  </div>
+</section>
 
   <!-- Overlay escura para contraste -->
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,0.3); z-index: 1;"></div>
