@@ -50,3 +50,6 @@ a, .nav-link {
 a:hover, .nav-link:hover {
   color: #005a94; /* Tom ligeiramente mais escuro ao passar o rato */
 }
+.text-azul {
+  color: #0071B8 !important;
+}
