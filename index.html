@@ -69,32 +69,34 @@
   </div>
 </nav>
 
-<!-- Secção de boas-vindas -->
-<section><div class="w-100 overflow-hidden bg-gray-100 position-relative section-padding" id="top">
-  <!-- Imagem de fundo com animação -->
-<div class="position-absolute top-0 start-0 w-100 h-100 bg-cover"
-     style="background-image: url('img/webp/fundo_trigo.webp'); background-position: center; z-index: 0; transform: scaleX(-1);"
-     data-aos="fade-left">
-</div>
+<!-- Secção de Boas-Vindas (layout moderno split) -->
+<section class="w-100 min-vh-100 d-flex align-items-center bg-white overflow-hidden" id="top">
+  <div class="container-fluid">
+    <div class="row g-0">
 
-  <!-- Conteúdo por cima da imagem -->
-  <div class="container position-relative" style="z-index: 1;">
-   <div class="row justify-content-end">
-  <div class="col-lg-7 py-vh-6" data-aos="fade-up">
-        <!-- Caixa com fundo branco translúcido -->
-        <div style="background: rgba(255, 255, 255, 0.8); padding: 2rem; border-radius: 0.2rem;">
-          <p class="lead fw-semibold text-justify">
-          <strong><span class="text-azul"> Delicie-se com a nossa Seleção de Produtos!<p></span> 
-         <p class="lead"> Fundada em 2022, a Crocgold Industry, é uma empresa portuguesa dedicada à produção e exportação de produtos alimentares, com foco na panificação e pastelaria.</strong>
+      <!-- Texto à esquerda -->
+      <div class="col-lg-6 d-flex align-items-center px-5 py-5">
+        <div class="text-start">
+          <h1 class="display-4 fw-bold text-verde mb-4">
+            Delicie-se com a nossa <br> Seleção de Produtos!
+          </h1>
+          <p class="lead text-azul">
+            Fundada em 2022, a <strong>Crocgold Industry</strong> é uma empresa portuguesa dedicada à produção e exportação de produtos alimentares, com foco na panificação e pastelaria.
+          </p>
         </div>
       </div>
+
+      <!-- Imagem à direita com flip -->
+      <div class="col-lg-6 d-none d-lg-block">
+        <div class="w-100 h-100"
+             style="background-image: url('img/webp/fundo_trigo.webp'); background-size: cover; background-position: center; transform: scaleX(-1);">
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-
-<!-- Espaçador invisível para evitar que o conteúdo fique escondido atrás da navbar -->
-<div style="position: relative;">
 </section>
+
 
 
   <!-- Secção de Serviços -->
