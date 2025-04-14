@@ -31,3 +31,22 @@ logo-maior {
 .text-justify {
   text-align: justify;
 }
+/* Verde do logotipo: para títulos e negritos */
+h1, h2, h3, h4, h5, h6,
+strong, .fw-bold {
+  color: #008739 !important; /* Verde elegante */
+}
+
+/* Azul do logotipo: para texto normal */
+body, p, li, span, .lead, .text-secondary {
+  color: #0071B8 !important; /* Azul suave */
+}
+
+/* Links no estilo do azul também (se quiseres) */
+a, .nav-link {
+  color: #0071B8;
+}
+
+a:hover, .nav-link:hover {
+  color: #005a94; /* Tom ligeiramente mais escuro ao passar o rato */
+}
