@@ -69,32 +69,43 @@
   </div>
 </nav>
 
-<!-- Secção de Boas-Vindas com fundo total e texto justificado -->
-<section class="position-relative w-100 overflow-hidden min-vh-100 d-flex align-items-center" id="top"
-         style="background-image: url('img/webp/fundo_trigo.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<!-- Secção de boas-vindas -->
+<section>
+  <div class="w-100 overflow-hidden bg-gray-100 position-relative section-padding" id="top">
+    
+    <!-- Imagem de fundo com flip horizontal -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-cover"
+         style="background-image: url('img/webp/fundo_trigo.webp'); background-position: center; z-index: 0; transform: scaleX(-1);"
+         data-aos="fade-left">
+    </div>
 
-  <!-- Sobreposição branca translúcida -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, 0.85); z-index: 1;"></div>
+    <!-- Conteúdo por cima da imagem -->
+    <div class="container position-relative" style="z-index: 1;">
+      <div class="row">
+        <div class="col-lg-8 col-xl-6 py-vh-6" data-aos="fade-up">
+          
+          <!-- Caixa ajustada à largura do texto -->
+          <div style="
+            background: rgba(255, 255, 255, 0.85);
+            padding: 2rem;
+            border-radius: 0.2rem;
+            max-width: 640px;
+            text-align: justify;
+          ">
+            <h1 class="display-5 fw-bold text-verde mb-4">
+              Delicie-se com a nossa<br>
+              Seleção de Produtos!
+            </h1>
 
-  <!-- Conteúdo -->
-  <div class="container position-relative z-2">
-    <div class="row justify-content-start">
-      <div class="col-lg-8 text-justify py-5">
-
-        <h1 class="display-4 fw-bold text-verde mb-4">
-          Delicie-se com a nossa <br> Seleção de Produtos!
-        </h1>
-
-        <p class="lead text-azul">
-          Fundada em 2022, a <strong class="text-verde">Crocgold Industry</strong> é uma empresa portuguesa dedicada à produção e exportação
-          de produtos alimentares, com foco na panificação e pastelaria.
-        </p>
-
+            <p class="lead text-azul fw-normal mb-0">
+              Fundada em 2022, a <span class="fw-bold text-verde">Crocgold Industry</span> é uma empresa portuguesa dedicada à produção e exportação de produtos alimentares, com foco na panificação e pastelaria.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
   <!-- Secção de Serviços -->
 <div class="w-100 overflow-hidden bg-gray-100 position-relative section-padding" id="servicos">
   <div class="container">
