@@ -81,3 +81,6 @@ a:hover, .nav-link:hover {
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
   border-color: #198754;
 }
+section[id] {
+  scroll-margin-top: 100px;
+}
