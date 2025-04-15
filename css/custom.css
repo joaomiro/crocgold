@@ -84,3 +84,6 @@ a:hover, .nav-link:hover {
 section[id] {
   scroll-margin-top: 100px;
 }
+#servicos, #aboutus, #numbers, #testimonials, #identidade, #workwithus, #gallery, #newsletter {
+  scroll-margin-top: 100px;
+}
