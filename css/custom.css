@@ -8,11 +8,6 @@ html {
   padding-bottom: 80px;
 }
 
-/* Offset para âncoras com navbar fixa */
-.section-offset {
-  padding-top: 160px;
-}
-
 /* Alinhamento justificado */
 .text-justify {
   text-align: justify;
