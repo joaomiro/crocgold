@@ -100,7 +100,7 @@ a:hover, .nav-link:hover {
 
 /* Previne que âncoras fiquem tapadas pela navbar fixa */
 section[id] {
-  scroll-margin-top: 70px;
+  scroll-margin-top: 120px;
 }
 
 /* Ajuste individual opcional */
