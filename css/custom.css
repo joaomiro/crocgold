@@ -11,7 +11,8 @@ html {
 
 /* Padding específico para a secção de boas-vindas */
 .hero-section {
-  padding-bottom: 80px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 /* Alinhamento justificado */
