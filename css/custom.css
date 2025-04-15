@@ -3,51 +3,36 @@ html {
   scroll-padding-top: 120px;
 }
 
-/* Padding geral para secções */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+}
+
+/* Padding geral das secções */
 .section-padding {
   padding-top: 120px;
   padding-bottom: 80px;
 }
+
+/* Espaçamento entre secções */
 section + section {
-  margin-top: 100px; /* Espaço visível entre secções */
+  margin-top: 60px;
 }
 
-/* Padding específico para a secção de boas-vindas */
-.hero-section {
+/* Hero (boas-vindas) */
+#top.hero-section {
+  min-height: 100vh;
   padding-top: 120px;
   padding-bottom: 120px;
-}
-.hero-section#top {
-  min-height: 100vh;
   overflow: hidden;
 }
-/* Alinhamento justificado */
+
+/* Justificação de texto */
 .text-justify {
   text-align: justify;
-}
-
-/* Tamanho do logo */
-.logo-flex {
-  max-height: 120px;
-  width: auto;
-}
-
-@media (max-width: 576px) {
-  .logo-flex {
-    max-height: 80px;
-  }
-}
-
-/* Correção: faltava o ponto antes de logo-maior e tinha "250x" em vez de "250px" */
-.logo-maior {
-  max-height: 250px;
-  width: auto;
-}
-
-@media (max-width: 576px) {
-  .logo-maior {
-    max-height: 80px;
-  }
 }
 
 /* Cores institucionais */
@@ -65,22 +50,18 @@ a, .nav-link {
 }
 
 a:hover, .nav-link:hover {
-  color: #005a94; /* Tom ligeiramente mais escuro ao passar o rato */
+  color: #005a94; /* Azul escuro no hover */
+}
+
+.text-verde {
+  color: #17833d;
 }
 
 .text-azul {
   color: #0071B8 !important;
 }
 
-/* Padding personalizado para hero (mobile) */
-@media (max-width: 576px) {
-  .hero-padding {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-  }
-}
-
-/* Estilo da galeria scroll */
+/* Galeria */
 .gallery-scroll {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -99,19 +80,102 @@ a:hover, .nav-link:hover {
   cursor: pointer;
 }
 
-/* Acessibilidade no input da newsletter */
+/* Lightbox */
+.gallery-image {
+  max-height: 240px;
+  object-fit: cover;
+  margin-right: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-btn {
+  position: fixed;
+  top: 50%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  z-index: 10000;
+}
+
+#prevBtn { left: 1rem; }
+#nextBtn { right: 1rem; }
+
+/* Scroll margin para âncoras */
+section[id] {
+  scroll-margin-top: 120px;
+}
+
+/* Input e botão do newsletter acessíveis */
 #newsletter input:focus,
 #newsletter button:focus {
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
   border-color: #198754;
 }
 
-/* Previne que âncoras fiquem tapadas pela navbar fixa */
-section[id] {
-  scroll-margin-top: 120px;
+#newsletter {
+  margin-bottom: 60px;
 }
 
-/* Footer refinado */
+/* Logos */
+.logo-flex {
+  max-height: 120px;
+  width: auto;
+}
+
+@media (max-width: 576px) {
+  .logo-flex {
+    max-height: 80px;
+  }
+
+  .logo-maior {
+    max-height: 80px;
+  }
+
+  .gallery-img {
+    height: 180px;
+    margin-right: 0.5rem;
+  }
+
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  footer p,
+  footer a,
+  footer .bi {
+    font-size: 0.875rem;
+  }
+}
+
+.logo-maior {
+  max-height: 250px;
+  width: auto;
+}
+
+/* Footer */
 footer .bi {
   transition: color 0.3s ease;
   margin: 0 0.5rem;
@@ -140,26 +204,4 @@ footer::before {
 footer .container {
   max-width: 700px;
   margin: 0 auto;
-}
-
-@media (max-width: 576px) {
-  .gallery-img {
-    height: 180px;
-    margin-right: 0.5rem;
-  }
-
-  footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  footer p,
-  footer a,
-  footer .bi {
-    font-size: 0.875rem;
-  }
-}
-
-#newsletter {
-  margin-bottom: 60px;
 }
