@@ -53,3 +53,9 @@ a:hover, .nav-link:hover {
 .text-azul {
   color: #0071B8 !important;
 }
+@media (max-width: 576px) {
+  .hero-padding {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+}
