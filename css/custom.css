@@ -114,3 +114,12 @@ footer .bi:hover {
 #newsletter {
   margin-bottom: 60px;
 }
+footer p, footer a {
+  margin-bottom: 0.25rem;
+}
+@media (max-width: 576px) {
+  .gallery-img {
+    height: 180px;
+    margin-right: 0.5rem;
+  }
+}
