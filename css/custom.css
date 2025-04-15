@@ -4,8 +4,13 @@ html {
 
 /* Padding geral para secções */
 .section-padding {
-  padding-top: 200px;
+  padding-top: 120px;
   padding-bottom: 80px;
+}
+
+/* Offset para âncoras com navbar fixa */
+.section-offset {
+  padding-top: 160px;
 }
 
 /* Alinhamento justificado */
@@ -25,7 +30,7 @@ html {
   }
 }
 
-/* Tamanho de logo alternativo */
+/* Correção: faltava o ponto antes de logo-maior e tinha "250x" em vez de "250px" */
 .logo-maior {
   max-height: 250px;
   width: auto;
@@ -52,7 +57,7 @@ a, .nav-link {
 }
 
 a:hover, .nav-link:hover {
-  color: #005a94;
+  color: #005a94; /* Tom ligeiramente mais escuro ao passar o rato */
 }
 
 .text-azul {
@@ -86,25 +91,19 @@ a:hover, .nav-link:hover {
   cursor: pointer;
 }
 
-@media (max-width: 576px) {
-  .gallery-img {
-    height: 180px;
-    margin-right: 0.5rem;
-  }
-}
-
-/* Acessibilidade nos inputs */
+/* Acessibilidade no input da newsletter */
 #newsletter input:focus,
 #newsletter button:focus {
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
   border-color: #198754;
 }
 
-/* Scroll preciso para evitar sobreposição com navbar */
+/* Previne que âncoras fiquem tapadas pela navbar fixa */
 section[id] {
-  scroll-margin-top: 140px; /* padding superior ao clicar */
+  scroll-margin-top: 160px;
 }
 
+/* Ajuste individual opcional */
 #servicos,
 #aboutus,
 #numbers,
@@ -113,22 +112,10 @@ section[id] {
 #workwithus,
 #gallery,
 #newsletter {
-  scroll-margin-top: 140px;
+  scroll-margin-top: 160px;
 }
 
 /* Footer refinado */
-footer {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  background-color: #1a1a1a;
-  text-align: center;
-}
-
-footer .container {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 footer .bi {
   transition: color 0.3s ease;
   margin: 0 0.5rem;
@@ -154,7 +141,17 @@ footer::before {
   margin-bottom: 1rem;
 }
 
+footer .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 @media (max-width: 576px) {
+  .gallery-img {
+    height: 180px;
+    margin-right: 0.5rem;
+  }
+
   footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -167,7 +164,6 @@ footer::before {
   }
 }
 
-/* Extra padding para dar espaço visual no fim da página */
 #newsletter {
   margin-bottom: 60px;
 }
