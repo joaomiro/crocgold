@@ -17,7 +17,10 @@ section + section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-
+.hero-section#top {
+  min-height: 100vh;
+  overflow: hidden;
+}
 /* Alinhamento justificado */
 .text-justify {
   text-align: justify;
