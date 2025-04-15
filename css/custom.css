@@ -1,5 +1,7 @@
+/* Comportamento suave e offset para âncoras */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* altura da navbar fixa */
 }
 
 /* Padding geral para secções */
@@ -93,21 +95,9 @@ a:hover, .nav-link:hover {
   border-color: #198754;
 }
 
-/* Previne que âncoras fiquem tapadas pela navbar fixa */
+/* Previne que âncoras fiquem tapadas pela navbar fixa (reforço, mas agora é feito via html scroll-padding) */
 section[id] {
   scroll-margin-top: 120px;
-}
-
-/* Ajuste individual opcional */
-#servicos,
-#aboutus,
-#numbers,
-#testimonials,
-#identidade,
-#workwithus,
-#gallery,
-#newsletter {
-  scroll-margin-top: 70px;
 }
 
 /* Footer refinado */
