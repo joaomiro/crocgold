@@ -1,45 +1,48 @@
+/* Padding geral para secções */
 .section-padding {
   padding-top: 120px;
   padding-bottom: 80px;
 }
+
+/* Alinhamento justificado */
 .text-justify {
   text-align: justify;
 }
+
+/* Tamanho do logo */
 .logo-flex {
   max-height: 120px;
   width: auto;
 }
+
 @media (max-width: 576px) {
   .logo-flex {
     max-height: 80px;
   }
 }
 
-logo-maior {
-  max-height: 250x;
+/* Correção: faltava o ponto antes de logo-maior e tinha "250x" em vez de "250px" */
+.logo-maior {
+  max-height: 250px;
   width: auto;
 }
 
 @media (max-width: 576px) {
-  logo-maior {
+  .logo-maior {
     max-height: 80px;
   }
 }
-.text-justify {
-  text-align: justify;
-}
-/* Verde do logotipo: para títulos e negritos */
+
+/* Cores institucionais */
 h1, h2, h3, h4, h5, h6,
 strong, .fw-bold {
   color: #008739 !important; /* Verde elegante */
 }
 
-/* Azul do logotipo: para texto normal */
 body, p, li, span, .lead, .text-secondary {
   color: #0071B8 !important; /* Azul suave */
 }
 
-/* Links no estilo do azul também (se quiseres) */
 a, .nav-link {
   color: #0071B8;
 }
@@ -47,15 +50,20 @@ a, .nav-link {
 a:hover, .nav-link:hover {
   color: #005a94; /* Tom ligeiramente mais escuro ao passar o rato */
 }
+
 .text-azul {
   color: #0071B8 !important;
 }
+
+/* Padding personalizado para hero (mobile) */
 @media (max-width: 576px) {
   .hero-padding {
     padding-top: 6rem;
     padding-bottom: 4rem;
   }
 }
+
+/* Estilo da galeria scroll */
 .gallery-scroll {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -73,14 +81,27 @@ a:hover, .nav-link:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+/* Acessibilidade no input da newsletter */
 #newsletter input:focus,
 #newsletter button:focus {
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
   border-color: #198754;
 }
+
+/* Previne que âncoras fiquem tapadas pela navbar fixa */
 section[id] {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 120px;
 }
-#servicos, #aboutus, #numbers, #testimonials, #identidade, #workwithus, #gallery, #newsletter {
-  scroll-margin-top: 100px;
+
+/* Aplicar margem específica para cada secção com id */
+#servicos,
+#aboutus,
+#numbers,
+#testimonials,
+#identidade,
+#workwithus,
+#gallery,
+#newsletter {
+  scroll-margin-top: 120px;
 }
