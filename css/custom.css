@@ -76,3 +76,8 @@ a:hover, .nav-link:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
+#newsletter input:focus,
+#newsletter button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+  border-color: #198754;
+}
