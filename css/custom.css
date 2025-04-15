@@ -9,7 +9,7 @@ html {
   padding-bottom: 80px;
 }
 section + section {
-  margin-top: 40px; /* Espaço visível entre secções */
+  margin-top: 100px; /* Espaço visível entre secções */
 }
 
 /* Padding específico para a secção de boas-vindas */
