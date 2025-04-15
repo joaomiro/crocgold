@@ -143,12 +143,15 @@ footer .container {
     font-size: 0.875rem;
   }
 }
+
+/* Correção dos cartões em "O que nos move" */
+#testimonials .row > .col {
+  display: flex;
+  flex-direction: column;
+}
 #testimonials .card-equal {
-  height: 100%;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-#testimonials .col {
-  display: flex;
 }
