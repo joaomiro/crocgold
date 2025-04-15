@@ -1,6 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Padding geral para secções */
 .section-padding {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 80px;
 }
 
@@ -21,7 +25,7 @@
   }
 }
 
-/* Correção: faltava o ponto antes de logo-maior e tinha "250x" em vez de "250px" */
+/* Tamanho de logo alternativo */
 .logo-maior {
   max-height: 250px;
   width: auto;
@@ -48,7 +52,7 @@ a, .nav-link {
 }
 
 a:hover, .nav-link:hover {
-  color: #005a94; /* Tom ligeiramente mais escuro ao passar o rato */
+  color: #005a94;
 }
 
 .text-azul {
@@ -82,19 +86,25 @@ a:hover, .nav-link:hover {
   cursor: pointer;
 }
 
-/* Acessibilidade no input da newsletter */
+@media (max-width: 576px) {
+  .gallery-img {
+    height: 180px;
+    margin-right: 0.5rem;
+  }
+}
+
+/* Acessibilidade nos inputs */
 #newsletter input:focus,
 #newsletter button:focus {
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
   border-color: #198754;
 }
 
-/* Previne que âncoras fiquem tapadas pela navbar fixa */
+/* Scroll preciso para evitar sobreposição com navbar */
 section[id] {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 140px; /* padding superior ao clicar */
 }
 
-/* Aplicar margem específica para cada secção com id */
 #servicos,
 #aboutus,
 #numbers,
@@ -103,53 +113,38 @@ section[id] {
 #workwithus,
 #gallery,
 #newsletter {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 140px;
 }
-footer .bi {
-  transition: color 0.3s ease;
+
+/* Footer refinado */
+footer {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  background-color: #1a1a1a;
+  text-align: center;
 }
-footer .bi:hover {
-  color: #ffffff;
-}
-#newsletter {
-  margin-bottom: 60px;
-}
-footer p, footer a {
-  margin-bottom: 0.25rem;
-}
-@media (max-width: 576px) {
-  .gallery-img {
-    height: 180px;
-    margin-right: 0.5rem;
-  }
-}
+
 footer .container {
   max-width: 700px;
   margin: 0 auto;
 }
-@media (max-width: 576px) {
-  footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  footer p,
-  footer a,
-  footer .bi {
-    font-size: 0.875rem;
-  }
-}
+
 footer .bi {
   transition: color 0.3s ease;
   margin: 0 0.5rem;
 }
+
 footer .bi:hover {
   color: #ffffff;
 }
+
 footer p.small,
 footer a {
   font-weight: 400;
   opacity: 0.8;
+  margin-bottom: 0.25rem;
 }
+
 footer::before {
   content: "";
   display: block;
@@ -157,4 +152,22 @@ footer::before {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  footer p,
+  footer a,
+  footer .bi {
+    font-size: 0.875rem;
+  }
+}
+
+/* Extra padding para dar espaço visual no fim da página */
+#newsletter {
+  margin-bottom: 60px;
 }
