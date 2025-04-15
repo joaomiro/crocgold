@@ -1,12 +1,16 @@
-/* Comportamento de scroll suave e compensação da navbar fixa */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px; /* altura da navbar */
+  scroll-padding-top: 120px;
 }
 
 /* Padding geral para secções */
 .section-padding {
   padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+/* Padding específico para a secção de boas-vindas */
+.hero-section {
   padding-bottom: 80px;
 }
 
@@ -27,7 +31,7 @@ html {
   }
 }
 
-/* Logo maior (ex: na página Sobre) */
+/* Correção: faltava o ponto antes de logo-maior e tinha "250x" em vez de "250px" */
 .logo-maior {
   max-height: 250px;
   width: auto;
@@ -54,14 +58,14 @@ a, .nav-link {
 }
 
 a:hover, .nav-link:hover {
-  color: #005a94;
+  color: #005a94; /* Tom ligeiramente mais escuro ao passar o rato */
 }
 
 .text-azul {
   color: #0071B8 !important;
 }
 
-/* Hero padding específico para mobile */
+/* Padding personalizado para hero (mobile) */
 @media (max-width: 576px) {
   .hero-padding {
     padding-top: 6rem;
@@ -69,7 +73,7 @@ a:hover, .nav-link:hover {
   }
 }
 
-/* Galeria horizontal scroll */
+/* Estilo da galeria scroll */
 .gallery-scroll {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -88,23 +92,16 @@ a:hover, .nav-link:hover {
   cursor: pointer;
 }
 
-@media (max-width: 576px) {
-  .gallery-img {
-    height: 180px;
-    margin-right: 0.5rem;
-  }
-}
-
-/* Acessibilidade inputs */
+/* Acessibilidade no input da newsletter */
 #newsletter input:focus,
 #newsletter button:focus {
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
   border-color: #198754;
 }
 
-/* Newsletter spacing */
-#newsletter {
-  margin-bottom: 60px;
+/* Previne que âncoras fiquem tapadas pela navbar fixa */
+section[id] {
+  scroll-margin-top: 120px;
 }
 
 /* Footer refinado */
@@ -139,6 +136,11 @@ footer .container {
 }
 
 @media (max-width: 576px) {
+  .gallery-img {
+    height: 180px;
+    margin-right: 0.5rem;
+  }
+
   footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -149,4 +151,8 @@ footer .container {
   footer .bi {
     font-size: 0.875rem;
   }
+}
+
+#newsletter {
+  margin-bottom: 60px;
 }
