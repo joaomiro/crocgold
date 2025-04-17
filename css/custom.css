@@ -3,38 +3,18 @@ html {
   scroll-padding-top: 120px;
 }
 
-/* ---------- Base Geral ---------- */
-body {
-  font-family: "Helvetica Neue", sans-serif;
-  background-image: url("img/bg-textura.png");
-  background-repeat: repeat;
-  background-size: 300px;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: #f8f9fa; /* Cor de fundo suave */
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-/* ---------- Scroll fixo para âncoras ---------- */
-section[id] {
-  scroll-margin-top: 120px;
-}
-
-/* ---------- Padding Geral para Secções ---------- */
+/* Padding geral para secções */
 .section-padding {
   padding-top: 120px;
   padding-bottom: 80px;
 }
 
-/* ---------- Espaço entre secções ---------- */
+/* Separação entre secções — espaço vertical entre elas */
 section:not(#top):not(#newsletter):not(footer) {
   margin-top: 80px;
 }
 
-/* ---------- Estilo da Secção de Boas-Vindas ---------- */
+/* Estilo para a hero (boas-vindas) */
 #top {
   min-height: 100vh;
   padding-top: 120px;
@@ -43,15 +23,11 @@ section:not(#top):not(#newsletter):not(footer) {
   overflow: hidden;
 }
 
-/* ---------- Fundo claro para as secções principais ---------- */
-.hero-section > .container,
-.section-padding > .container {
-  background-color: rgba(255, 255, 255, 0.95); /* fundo claro para leitura */
-  border-radius: 8px;
-  padding: 2rem;
+.text-justify {
+  text-align: justify;
 }
 
-/* ---------- Logos ---------- */
+/* Tamanho dos logos */
 .logo-flex {
   max-height: 120px;
   width: auto;
@@ -71,7 +47,7 @@ section:not(#top):not(#newsletter):not(footer) {
   }
 }
 
-/* ---------- Cores Institucionais ---------- */
+/* Cores institucionais */
 h1, h2, h3, h4, h5, h6,
 strong, .fw-bold {
   color: #008739 !important;
@@ -92,7 +68,7 @@ a:hover, .nav-link:hover {
   color: #17833d !important;
 }
 
-/* ---------- Galeria ---------- */
+/* Galeria */
 .gallery-scroll {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -115,7 +91,7 @@ a:hover, .nav-link:hover {
   }
 }
 
-/* ---------- Newsletter ---------- */
+/* Newsletter */
 #newsletter input:focus,
 #newsletter button:focus {
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
@@ -125,7 +101,12 @@ a:hover, .nav-link:hover {
   margin-bottom: 60px;
 }
 
-/* ---------- Footer ---------- */
+/* Prevenir âncoras tapadas pela navbar */
+section[id] {
+  scroll-margin-top: 120px;
+}
+
+/* Footer */
 footer .bi {
   transition: color 0.3s ease;
   margin: 0 0.5rem;
@@ -163,11 +144,7 @@ footer .container {
   }
 }
 
-/* ---------- Secção "O que nos move" (Testemunhos) ---------- */
-#testimonials {
-  min-height: 100vh;
-  padding-bottom: 160px;
-}
+/* Garantir cartões iguais na secção "O que nos move" */
 #testimonials .row > .col {
   display: flex;
 }
@@ -177,4 +154,35 @@ footer .container {
   justify-content: space-between;
   height: 100%;
   width: 100%;
+}
+#testimonials {
+  min-height: 100vh;
+  padding-bottom: 160px;
+}
+
+/* Fundo com textura */
+body {
+  background-image: url("img/bg-textura.png");
+  background-repeat: repeat;
+  background-size: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #f8f9fa;
+}
+
+/* Aplicar leve opacidade para ver a textura */
+.hero-section,
+.section-padding,
+#newsletter,
+footer {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-radius: 8px;
+  padding: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* Evitar que o .container tenha fundo opaco por erro */
+.container {
+  background-color: transparent !important;
 }
