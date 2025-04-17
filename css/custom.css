@@ -6,12 +6,13 @@ html {
 
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-image: url("img/bg-textura.png");
-  background-repeat: repeat;
-  background-size: 300px;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: #f8f9fa;
+  background-image: url("img/bg-textura.png") !important;
+  background-repeat: repeat !important;
+  background-size: 300px !important;
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  background-color: #eaeaea !important;
+  z-index: 0 !important;
 }
 
 /* ======== PADRÕES ======== */
@@ -190,6 +191,13 @@ footer .container {
 .bg-white,
 .shadow-sm,
 .bg-light {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ======== EXTRA: Forçar fundo transparente em tudo para DEBUG ======== */
+/* (podes remover depois de confirmar que está a funcionar) */
+* {
   background-color: transparent !important;
   box-shadow: none !important;
 }
