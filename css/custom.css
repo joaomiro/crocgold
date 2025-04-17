@@ -154,7 +154,7 @@ footer .container {
   }
 }
 
-/* ======== BLOCO TESTIMONIALS - Alinhamento e altura igual ======== */
+/* ======== BLOCO TESTIMONIALS ======== */
 #testimonials .row > .col {
   display: flex;
 }
@@ -178,7 +178,7 @@ footer .container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-/* ======== REMOVER FUNDOS DE CONTAINERES PADRÃO ======== */
+/* ======== REMOVER FUNDOS PADRÃO ======== */
 .card,
 .bg-white,
 .shadow-sm,
@@ -198,4 +198,33 @@ footer .container {
   padding: 2rem 1rem;
   border-radius: 0;
   box-shadow: none !important;
+}
+
+/* ======== LIGHTBOX ======== */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.lightbox-overlay.show {
+  display: flex;
+}
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
 }
