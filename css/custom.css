@@ -239,3 +239,27 @@ body > footer::before {
     padding: 0.5rem;
   }
 }
+/* ======== Ajuste de Lightbox/Modal ======== */
+/* Para o modal Bootstrap */
+#galleryModalImg {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+}
+
+/* Para o lightbox custom */
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+}
+
+/* Garantir centragens no conteúdo do modal/lightbox */
+#galleryModal .modal-content,
+#lightbox-overlay.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
