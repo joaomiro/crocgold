@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* fallback */
 }
 
 /* ======== PADRÕES ======== */
@@ -24,13 +24,14 @@ section:not(#top):not(#newsletter):not(footer) {
   margin-top: 80px;
 }
 
-/* ======== HERO ======== */
+/* ======== HERO (boas-vindas) ======== */
 #top {
   min-height: 100vh;
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
   overflow: hidden;
+  /* remover background-image daqui */
 }
 
 /* ======== TEXTOS ======== */
@@ -38,6 +39,7 @@ section:not(#top):not(#newsletter):not(footer) {
   text-align: justify;
 }
 
+/* Cores institucionais */
 h1, h2, h3, h4, h5, h6,
 strong, .fw-bold {
   color: #008739 !important;
@@ -154,7 +156,7 @@ footer .container {
   }
 }
 
-/* ======== BLOCO TESTIMONIALS - Alinhamento e altura igual ======== */
+/* ======== TESTEMUNHOS COM ALTURA IGUAL ======== */
 #testimonials .row > .col {
   display: flex;
 }
@@ -170,26 +172,19 @@ footer .container {
   padding-bottom: 160px;
 }
 
-/* ======== FUNDO BRANCO TRANSPARENTE NOS CONTAINERS ======== */
-.container.bg-bloco,
-.hero-section > .container,
-.section-padding > .container,
-#identidade .container,
-#aboutus .container,
-#workwithus .container,
-#numbers .container,
-#testimonials .container {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  padding: 2rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Remove fundo branco de elementos Bootstrap */
+/* ======== BLOCO COM FUNDO BRANCO TRANSLÚCIDO ======== */
+section:not(#top):not(#newsletter):not(footer) > .container,
 .card,
 .bg-white,
-.shadow-sm,
-.bg-light {
-  background-color: transparent !important;
-  box-shadow: none !important;
+.bg-light,
+.shadow-sm {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* (opcional) efeito vidro fosco moderno */
+section > .container {
+  backdrop-filter: blur(6px);
 }
