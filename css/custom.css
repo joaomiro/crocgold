@@ -228,3 +228,24 @@ footer .container {
   cursor: pointer;
   user-select: none;
 }
+/* ===== Navbar full‑width, flush edges, no rounding, menor altura ===== */
+nav.navbar {
+  width: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 0 !important;       /* remove cantos arredondados */
+  padding-top: 0.5rem !important;    /* ajusta a altura vertical */
+  padding-bottom: 0.5rem !important;
+}
+
+nav.navbar .container {
+  max-width: 100% !important;        /* ocupa toda a largura */
+  padding-left: 0 !important;        /* sem margens laterais */
+  padding-right: 0 !important;
+}
+
+nav.navbar .bloco-transparente {
+  border-radius: 0 !important;       /* se estiveres a usar o bloco-transparente */
+  padding-top: 0.5rem !important;    /* reduzir o “acolchoamento” interno */
+  padding-bottom: 0.5rem !important;
+}
