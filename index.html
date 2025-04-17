@@ -293,26 +293,21 @@
       </div>
     </div>
     <div class="d-flex overflow-auto gap-4 gallery-scroll">
-      <figure class="gallery-item">
-        <img src="img/frango_panko.jpg" alt="Frango Panko" class="gallery-img">
-        <figcaption class="gallery-caption">Frango Panko</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="img/sushi_1.jpg" alt="Sushi" class="gallery-img">
-        <figcaption class="gallery-caption">Sushi</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="img/webp/crispy-panko-baked-eggplant-tenders_2sm.webp" alt="Beringela Panada" class="gallery-img">
-        <figcaption class="gallery-caption">Beringela Panada</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="img/webp/ten-don-15.webp" alt="Ten Don" class="gallery-img">
-        <figcaption class="gallery-caption">Ten Don</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="img/webp/receita-de-fil'e-de-frango-empanado.webp" alt="Frango Empanado" class="gallery-img">
-        <figcaption class="gallery-caption">Frango Empanado</figcaption>
-      </figure>
+      <img src="img/frango_panko.jpg"
+           alt="Frango Panko"
+           class="gallery-img">
+      <img src="img/sushi_1.jpg"
+           alt="Sushi"
+           class="gallery-img">
+      <img src="img/webp/crispy-panko-baked-eggplant-tenders_2sm.webp"
+           alt="Beringela Panada"
+           class="gallery-img">
+      <img src="img/webp/ten-don-15.webp"
+           alt="Ten Don"
+           class="gallery-img">
+      <img src="img/webp/receita-de-fil'e-de-frango-empanado.webp"
+           alt="Frango Empanado"
+           class="gallery-img">
     </div>
   </div>
 </section>
@@ -366,6 +361,12 @@
   </div>
 </footer>
 
+<!-- Lightbox Overlay -->
+<div id="lightbox-overlay" class="lightbox-overlay">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="">
+</div>
+
   <!-- Scripts -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -378,6 +379,33 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY >= header.offsetHeight);
     });
+// Lightbox functionality
+const overlay = document.getElementById('lightbox-overlay');
+const lbImg   = overlay.querySelector('.lightbox-img');
+const lbClose = overlay.querySelector('.lightbox-close');
+
+// ao clicar em qualquer imagem da galeria
+document.querySelectorAll('.gallery-img').forEach(img => {
+  img.addEventListener('click', () => {
+    lbImg.src = img.src;
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+// fechar com o "×"
+lbClose.addEventListener('click', () => {
+  overlay.classList.remove('show');
+  document.body.style.overflow = '';
+});
+
+// fechar clicando fora da imagem
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) {
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+});
   </script>
   <script src="js/custom.js"></script>
 </body>
