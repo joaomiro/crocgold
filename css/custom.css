@@ -155,3 +155,6 @@ footer .container {
   height: 100%;
   width: 100%;
 }
+#testimonials .col > div {
+  min-height: 100%;
+}
