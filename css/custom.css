@@ -6,12 +6,13 @@ html {
 
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-image: url('img/webp/fundo_trigo.webp');
+  background-image: url("img/webp/fundo_trigo.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   background-attachment: fixed;
+  background-position: center;
   background-color: #f8f9fa;
+  line-height: 1.6;
 }
 
 /* ======== PADRÕES ======== */
@@ -24,39 +25,39 @@ section:not(#top):not(#newsletter):not(footer) {
   margin-top: 80px;
 }
 
-/* ======== HERO ======== */
-#top {
-  min-height: 100vh;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  position: relative;
-  overflow: hidden;
-}
-
 /* ======== TEXTOS ======== */
 .text-justify {
   text-align: justify;
 }
 
-/* Cores institucionais */
 h1, h2, h3, h4, h5, h6,
 strong, .fw-bold {
   color: #008739 !important;
 }
+
 body, p, li, span, .lead, .text-secondary {
   color: #0071B8 !important;
 }
+
 a, .nav-link {
   color: #0071B8;
 }
 a:hover, .nav-link:hover {
   color: #005a94;
 }
+
 .text-azul {
   color: #0071B8 !important;
 }
 .text-verde {
   color: #17833d !important;
+}
+
+/* ======== BLOCOS DE TEXTO COM FUNDO TRANSLÚCIDO ======== */
+.bg-white-translucent {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 
 /* ======== LOGOS ======== */
@@ -145,48 +146,4 @@ footer .container {
 }
 @media (max-width: 576px) {
   footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  footer p,
-  footer a,
-  footer .bi {
-    font-size: 0.875rem;
-  }
-}
-
-/* ======== TESTIMONIALS: Alinhamento e altura igual ======== */
-#testimonials .row > .col {
-  display: flex;
-}
-#testimonials .card-equal {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-}
-#testimonials {
-  min-height: 100vh;
-  padding-bottom: 160px;
-}
-
-/* ======== BLOCOS COM FUNDO BRANCO TRANSPARENTE ======== */
-.container,
-.card,
-.bg-white,
-.shadow-sm,
-.bg-light,
-.rounded,
-.p-4,
-.p-md-5 {
-  background-color: rgba(255, 255, 255, 0.85) !important;
-  box-shadow: none !important;
-  border-radius: 12px;
-}
-
-/* Para usar transparência total, aplica esta classe extra */
-.transparent-bg {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
+    padding-top: 2
