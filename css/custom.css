@@ -164,25 +164,20 @@ footer .container {
 body {
   background-image: url("img/bg-textura.png");
   background-repeat: repeat;
-  background-size: 400px;
+  background-size: 300px;
   background-attachment: fixed;
   background-position: center;
   background-color: #f8f9fa;
 }
 
-/* Aplicar leve opacidade para ver a textura */
+/* Blocos com fundo semi-transparente */
 .hero-section,
 .section-padding,
 #newsletter,
 footer {
-  background-color: rgba(255, 255, 255, 0.94);
+  background-color: rgba(255, 255, 255, 0.88); /* visibilidade da textura */
   border-radius: 8px;
   padding: 2rem;
   z-index: 1;
   position: relative;
-}
-
-/* Evitar que o .container tenha fundo opaco por erro */
-.container {
-  background-color: transparent !important;
 }
