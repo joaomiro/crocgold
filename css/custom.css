@@ -272,6 +272,12 @@ body > footer::before {
   .hero-text h1 {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* opcional */
+  }
+}
+/* só no desktop (>992px) força sem quebra de linha */
+@media (min-width: 992px) {
+  .hero-text h1 {
+    white-space: nowrap;    /* sem quebras de linha */
+    overflow: hidden;        /* esconde o excesso se ultrapassar */
   }
 }
