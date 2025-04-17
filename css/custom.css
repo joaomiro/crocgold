@@ -3,18 +3,38 @@ html {
   scroll-padding-top: 120px;
 }
 
-/* Padding geral para secções */
+/* ---------- Base Geral ---------- */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-image: url("img/bg-textura.png");
+  background-repeat: repeat;
+  background-size: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #f8f9fa; /* Cor de fundo suave */
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* ---------- Scroll fixo para âncoras ---------- */
+section[id] {
+  scroll-margin-top: 120px;
+}
+
+/* ---------- Padding Geral para Secções ---------- */
 .section-padding {
   padding-top: 120px;
   padding-bottom: 80px;
 }
 
-/* Separação entre secções — espaço vertical entre elas */
+/* ---------- Espaço entre secções ---------- */
 section:not(#top):not(#newsletter):not(footer) {
   margin-top: 80px;
 }
 
-/* Estilo para a hero (boas-vindas) */
+/* ---------- Estilo da Secção de Boas-Vindas ---------- */
 #top {
   min-height: 100vh;
   padding-top: 120px;
@@ -23,11 +43,15 @@ section:not(#top):not(#newsletter):not(footer) {
   overflow: hidden;
 }
 
-.text-justify {
-  text-align: justify;
+/* ---------- Fundo claro para as secções principais ---------- */
+.hero-section > .container,
+.section-padding > .container {
+  background-color: rgba(255, 255, 255, 0.95); /* fundo claro para leitura */
+  border-radius: 8px;
+  padding: 2rem;
 }
 
-/* Tamanho dos logos */
+/* ---------- Logos ---------- */
 .logo-flex {
   max-height: 120px;
   width: auto;
@@ -47,7 +71,7 @@ section:not(#top):not(#newsletter):not(footer) {
   }
 }
 
-/* Cores institucionais */
+/* ---------- Cores Institucionais ---------- */
 h1, h2, h3, h4, h5, h6,
 strong, .fw-bold {
   color: #008739 !important;
@@ -68,7 +92,7 @@ a:hover, .nav-link:hover {
   color: #17833d !important;
 }
 
-/* Galeria */
+/* ---------- Galeria ---------- */
 .gallery-scroll {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -91,7 +115,7 @@ a:hover, .nav-link:hover {
   }
 }
 
-/* Newsletter */
+/* ---------- Newsletter ---------- */
 #newsletter input:focus,
 #newsletter button:focus {
   box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
@@ -101,12 +125,7 @@ a:hover, .nav-link:hover {
   margin-bottom: 60px;
 }
 
-/* Prevenir âncoras tapadas pela navbar */
-section[id] {
-  scroll-margin-top: 120px;
-}
-
-/* Footer */
+/* ---------- Footer ---------- */
 footer .bi {
   transition: color 0.3s ease;
   margin: 0 0.5rem;
@@ -144,7 +163,11 @@ footer .container {
   }
 }
 
-/* Garantir cartões iguais na secção "O que nos move" */
+/* ---------- Secção "O que nos move" (Testemunhos) ---------- */
+#testimonials {
+  min-height: 100vh;
+  padding-bottom: 160px;
+}
 #testimonials .row > .col {
   display: flex;
 }
@@ -154,25 +177,4 @@ footer .container {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-}
-#testimonials {
-  min-height: 100vh;
-  padding-bottom: 160px;
-}
-#testimonials {
-  padding-bottom: 160px;
-}
-body {
-  background-image: url("img/bg-textura.png");
-  background-repeat: repeat;
-  background-size: 300px;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: #f8f9fa; /* cor base suave por baixo da textura */
-}
-.hero-section > .container,
-.section-padding > .container {
-  background-color: rgba(255, 255, 255, 0.95); /* leve opacidade */
-  border-radius: 8px;
-  padding: 2rem;
 }
