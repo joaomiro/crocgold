@@ -295,3 +295,29 @@ body > footer::before {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   margin-bottom: 2rem;
 }
+/* ======== SERVIÇOS: cartões isolados ======== */
+/* 1) Remove o vidro/bloco do container pai */
+#servicos > .bloco-transparente {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* 2) Aplica a transparência + sombra a cada cartão */
+#servicos .row.g-4 .col > div {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+#servicos .row.g-4 .col > div:hover {
+  transform: translateY(-4px);
+}
+
+/* 3) Espaçamento extra entre linhas, se empilhar */
+#servicos .row.g-4 {
+  row-gap: 2rem;
+}
