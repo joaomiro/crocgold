@@ -12,7 +12,6 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-color: #f8f9fa;
-  line-height: 1.6;
 }
 
 /* ======== PADRÕES ======== */
@@ -25,6 +24,15 @@ section:not(#top):not(#newsletter):not(footer) {
   margin-top: 80px;
 }
 
+/* ======== HERO ======== */
+#top {
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
 /* ======== TEXTOS ======== */
 .text-justify {
   text-align: justify;
@@ -34,30 +42,20 @@ h1, h2, h3, h4, h5, h6,
 strong, .fw-bold {
   color: #008739 !important;
 }
-
 body, p, li, span, .lead, .text-secondary {
   color: #0071B8 !important;
 }
-
 a, .nav-link {
   color: #0071B8;
 }
 a:hover, .nav-link:hover {
   color: #005a94;
 }
-
 .text-azul {
   color: #0071B8 !important;
 }
 .text-verde {
   color: #17833d !important;
-}
-
-/* ======== BLOCOS DE TEXTO COM FUNDO TRANSLÚCIDO ======== */
-.bg-white-translucent {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 2rem;
-  border-radius: 0.5rem;
 }
 
 /* ======== LOGOS ======== */
@@ -146,4 +144,58 @@ footer .container {
 }
 @media (max-width: 576px) {
   footer {
-    padding-top: 2
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  footer p,
+  footer a,
+  footer .bi {
+    font-size: 0.875rem;
+  }
+}
+
+/* ======== BLOCO TESTIMONIALS - Alinhamento e altura igual ======== */
+#testimonials .row > .col {
+  display: flex;
+}
+#testimonials .card-equal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+#testimonials {
+  min-height: 100vh;
+  padding-bottom: 160px;
+}
+
+/* ======== TRANSPARÊNCIA DOS BLOCOS ======== */
+.bloco-transparente {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ======== REMOVER FUNDOS DE CONTAINERES PADRÃO ======== */
+.card,
+.bg-white,
+.shadow-sm,
+.bg-light {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.hero-section > .container,
+.section-padding > .container,
+#identidade .container,
+#aboutus .container,
+#workwithus .container,
+#numbers .container,
+#testimonials .container {
+  background-color: transparent !important;
+  padding: 2rem 1rem;
+  border-radius: 0;
+  box-shadow: none !important;
+}
