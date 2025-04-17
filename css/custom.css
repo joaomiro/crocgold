@@ -24,21 +24,21 @@ body {
 /* ======== NAVBAR ======== */
 .navbar {
   position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.85) !important;
-  padding: 0.25rem 1rem;
+  top: 0; left: 0; right: 0;
+  background: rgba(255, 255, 255, 0.95) !important;
+  padding: 0.4rem 1rem;
   border-radius: 0 !important;
+  box-shadow: none;
   z-index: 1030;
   transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar.scrolled {
-  padding: 0.1rem 1rem;
+  padding: 0.2rem 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 .navbar .container {
-  max-width: 1140px;
+  max-width: 100%;
+  padding: 0 1rem;
 }
 .navbar-brand img {
   height: 48px;
@@ -64,6 +64,12 @@ body {
   background: #005a94;
   color: #fff;
 }
+/* remove bloco-transparente styling from inside navbar */
+.navbar .bloco-transparente {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
 
 /* ======== HERO SECTION ======== */
 .hero-section {
@@ -74,10 +80,8 @@ body {
   align-items: center;
 }
 .hero-section .position-absolute {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background-size: cover;
   background-position: center;
 }
@@ -87,8 +91,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -102,11 +106,11 @@ body {
   font-size: 1.125rem;
 }
 
-/* ======== SECTIONS ======== */
+/* ======== SECTION STANDARD PADDING ======== */
 .section-padding {
   padding: 6rem 0;
 }
-section:not(#top):not(#newsletter):not(footer) {
+section:not(#top):not(#newsletter):not(body > footer) {
   margin-top: 4rem;
 }
 
@@ -157,7 +161,7 @@ a:hover, .nav-link:hover {
   cursor: pointer;
 }
 
-/* ======== IDENTITY/TESTIMONIALS ======== */
+/* ======== TESTIMONIALS / IDENTITY ======== */
 #testimonials .row > .col {
   display: flex;
 }
@@ -183,32 +187,40 @@ a:hover, .nav-link:hover {
   border-color: #198754;
 }
 
-/* ======== FOOTER ======== */
-footer {
+/* ======== PAGE FOOTER ======== */
+body > footer {
   background: #343a40;
   padding: 4rem 0;
   color: #fff;
 }
-footer .bi {
-  transition: color 0.3s ease;
+body > footer .bi {
   margin: 0 0.5rem;
+  transition: color 0.3s ease;
 }
-footer .bi:hover {
+body > footer .bi:hover {
   color: #f8f9fa;
 }
-footer p.small,
-footer a {
+body > footer p.small,
+body > footer a {
   font-weight: 400;
   opacity: 0.8;
   margin-bottom: 0.25rem;
 }
-footer::before {
+body > footer::before {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   margin-bottom: 1rem;
+}
+
+/* ======== INTERNAL FOOTER RESET ======== */
+.bloco-transparente footer {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  color: inherit !important;
 }
 
 /* ======== RESPONSIVE ======== */
