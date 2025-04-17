@@ -25,251 +25,141 @@
   <meta name="twitter:image" content="https://joaomiro.github.io/crocgold/img/croc_logo.png">
 
   <!-- CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/theme.min.css">
-<link rel="stylesheet" href="css/responsive.min.css">
-<link rel="stylesheet" href="css/custom.css"> <!-- CUSTOM POR ÚLTIMO -->
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-  <style>
-
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-    }
-    .navbar-nav .nav-link {
-      font-weight: 500;
-    }
-    .section-padding {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-    .text-verde {
-      color: #17833d;
-    }
-    .text-azul {
-      color: #1475C0;
-    }
-    html {
-  scroll-behavior: smooth;
-}
-    .gallery-image {
-      max-height: 240px;
-      object-fit: cover;
-      margin-right: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    .lightbox.show {
-      display: flex;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-    .lightbox-btn {
-      position: fixed;
-      top: 50%;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 2rem;
-      z-index: 10000;
-    }
-    #prevBtn { left: 1rem; }
-    #nextBtn { right: 1rem; }
-
-  </style>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/theme.min.css">
+  <link rel="stylesheet" href="css/responsive.min.css">
+  <link rel="stylesheet" href="css/custom.css"> <!-- custom por último -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
+
 <body>
 
-<!-- Navbar Profissional e Responsiva -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm" id="navScroll">
-  <div class="container">
-    <a class="navbar-brand" href="#top">
-      <img src="img/logo_horizontal.png" alt="Crocgold Industry" height="56">
-    </a>
-
-    <!-- Botão Mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Links -->
-    <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
-      <ul class="navbar-nav mb-2 mb-lg-0 text-center text-lg-start">
-        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link" href="#aboutus">Qualidade</a></li>
-        <li class="nav-item"><a class="nav-link" href="#numbers">Logística</a></li>
-        <li class="nav-item"><a class="nav-link" href="#testimonials">Identidade</a></li>
-        <li class="nav-item"><a class="nav-link" href="#identidade">Sustentabilidade</a></li>
-        <li class="nav-item"><a class="nav-link" href="#workwithus">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
-      </ul>
-
-      <!-- Botão Catálogo -->
-      <a href="https://catalogo" class="btn btn-outline-dark ms-lg-4 mt-3 mt-lg-0">
-        Catálogo
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-             fill="currentColor" class="bi bi-download ms-1" viewBox="0 0 16 16">
-          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-        </svg>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm" id="navScroll">
+    <div class="container bloco-transparente">
+      <a class="navbar-brand" href="#top">
+        <img src="img/logo_horizontal.png" alt="Crocgold Industry" height="56">
       </a>
-    </div>
-  </div>
-</nav>
-
-<!-- Secção de Boas-Vindas -->
-<section id="top" class="hero-section d-flex align-items-center justify-content-start">
-  
-  <!-- Imagem de fundo -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" 
-       style="background-image: url('img/webp/fundo_trigo.webp'); background-size: cover; background-position: center; z-index: 0;"
-       data-aos="fade-left">
-  </div>
-
-  <!-- Conteúdo por cima da imagem -->
-  <div class="container position-relative" style="z-index: 1;">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-10 col-xl-9" data-aos="fade-up" data-aos-delay="200">
-        <div class="p-4 p-md-5 rounded shadow-lg" style="background-color: rgba(255, 255, 255, 0.85); max-width: 1200px;">
-          <h1 class="display-5 fw-bold text-verde mb-4 text-center text-md-start">
-            Delicie-se com a nossa Seleção de Produtos!
-          </h1>
-          <p class="fs-4 text-azul text-justify mb-0">
-            Fundada em 2022, a <span class="fw-bold text-verde">Crocgold Industry, Lda</span> é uma empresa portuguesa exclusivamente dedicada à produção e exportação de produtos alimentares, com foco na panificação e pastelaria.
-          </p>
-        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-center text-lg-start">
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aboutus">Qualidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="#numbers">Logística</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Identidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="#identidade">Sustentabilidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="#workwithus">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+        </ul>
+        <a href="https://catalogo" class="btn btn-outline-dark ms-lg-4">
+          Catálogo <i class="bi bi-download"></i>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- Secção de Serviços -->
-<section id="servicos" class="hero-section w-100 bg-gray-100 section-padding overflow-hidden">
-  <div class="container">
-
-    <!-- Título da Secção -->
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-lg-10 col-xl-9" data-aos="fade-down">
-        <h2 class="display-6 fw-bold">
-          <span class="text-azul">Razões pelas quais os nossos parceiros confiam em nós:</span><br>
-          <strong>Tradição, Inovação e Compromisso.</strong>
-        </h2>
-      </div>
-    </div>
-
-    <!-- Cartões -->
-    <div class="row g-4 justify-content-center text-center">
-
-      <!-- Cartão 1 -->
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="card border-0 p-4 text-center h-100 bg-white rounded shadow-sm">
-          <img src="img/excelencia.jpg" alt="Excelência Artesanal"
-               class="rounded-circle mb-3 mx-auto" style="width: 100px; height: 100px; object-fit: cover;">
-          <h4 class="fw-semibold text-verde mb-2">Excelência Artesanal</h4>
-          <p class="text-azul fs-5">
-           <br>Processos refinados, atenção ao detalhe e respeito pela tradição. Cada produto reflete um padrão elevado de qualidade e autenticidade.
-          </p>
-        </div>
-      </div>
-
-      <!-- Cartão 2 -->
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="400">
-        <div class="card border-0 p-4 text-center h-100 bg-white rounded shadow-sm">
-          <img src="img/producao.jpg" alt="Produção e Seleção"
-               class="rounded-circle mb-3 mx-auto" style="width: 100px; height: 100px; object-fit: cover;">
-          <h4 class="fw-semibold text-verde mb-2">Produção e Seleção</h4>
-          <p class="text-azul fs-5">
-             <br>Automação inteligente e supervisão constante, mantendo um padrão de excelência em cada lote.
-          </p>
-        </div>
-      </div>
-
-      <!-- Cartão 3 -->
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="600">
-        <div class="card border-0 p-4 text-center h-100 bg-white rounded shadow-sm">
-          <img src="img/alcance.png" alt="Alcance Global"
-               class="rounded-circle mb-3 mx-auto" style="width: 100px; height: 100px; object-fit: cover;">
-          <h4 class="fw-semibold text-verde mb-2">Alcance Global</h4>
-          <p class="text-azul fs-5">
-            <br>Entregas com rigor, rapidez e rastreabilidade. <br>Em qualquer escala, em qualquer lugar.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- Secção de Qualidade -->
-<section id="aboutus" class="hero-section w-100 bg-gray-100 section-padding overflow-hidden">
-  <div class="container">
-    <div class="row align-items-start justify-content-between">
-
-      <!-- Coluna de Imagens com disposição dinâmica -->
-      <div class="col-lg-6">
-        <div class="row g-3">
-
-          <div class="col-12" data-aos="fade-right">
-            <div class="ratio ratio-16x9 rounded shadow bg-cover"
-                 style="background-image: url('img/exemplos_farinha.jpg'); background-position: center; background-size: cover;"></div>
+  <!-- Hero -->
+  <section id="top" class="hero-section d-flex align-items-center justify-content-start">
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+         style="background-image:url('img/webp/fundo_trigo.webp');background-size:cover;z-index:0;"
+         data-aos="fade-left"></div>
+    <div class="container bloco-transparente position-relative" style="z-index:1;">
+      <div class="row">
+        <div class="col-12 col-md-10 col-xl-9" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 p-md-5 rounded" style="background:rgba(255,255,255,0.85);max-width:1200px;">
+            <h1 class="display-5 fw-bold text-verde text-center text-md-start mb-4">
+              Delicie-se com a nossa Seleção de Produtos!
+            </h1>
+            <p class="fs-4 text-azul text-justify mb-0">
+              Fundada em 2022, a <strong class="text-verde">Crocgold Industry, Lda</strong>
+              é uma empresa portuguesa exclusivamente dedicada à produção e exportação de
+              produtos alimentares, com foco na panificação e pastelaria.
+            </p>
           </div>
-
-          <div class="col-6" data-aos="fade-up">
-            <div class="ratio ratio-1x1 rounded shadow bg-cover"
-                 style="background-image: url('img/milho.jpg'); background-position: center; background-size: cover;"></div>
-          </div>
-
-          <div class="col-6" data-aos="fade-left">
-            <div class="ratio ratio-4x3 rounded shadow bg-cover"
-                 style="background-image: url('img/panko-breadcrumbs-2-1200.jpg'); background-position: center; background-size: cover;"></div>
-          </div>
-
         </div>
       </div>
-
-      <!-- Coluna de Texto -->
-      <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
-        <h3 class="fw-bold border-top border-dark pt-4 text-verde">
-          Do Grão ao Prato: Qualidade em cada fase
-        </h3>
-        <p class="lead text-azul mt-4">
-          O panko é um tipo de pão ralado originário do Japão, muito usado na culinária asiática e que tem ganho popularidade em várias partes do mundo. Ao contrário do pão ralado tradicional, o panko é feito a partir de pão branco sem côdea, o que lhe dá uma textura mais leve, crocante e em flocos maiores.
-          <br><br>Esta característica faz com que os alimentos empanados com panko fiquem mais estaladiços e absorvam menos gordura durante a fritura, resultando em pratos mais leves e crocantes. É ideal para empanar carnes, peixes, mariscos ou até legumes.
-          <br><br>Para além de ser utilizado em fritos, o panko também pode ser usado como cobertura em pratos de forno, como gratinados, ou até para dar um toque crocante a saladas e outras receitas criativas.
-        </p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Serviços -->
+  <section id="servicos" class="hero-section w-100 section-padding overflow-hidden">
+    <div class="container bloco-transparente">
+      <div class="row justify-content-center text-center mb-5" data-aos="fade-down">
+        <div class="col-lg-10 col-xl-9">
+          <h2 class="display-6 fw-bold">
+            <span class="text-azul">Razões pelas quais os nossos parceiros confiam em nós:</span><br>
+            <strong>Tradição, Inovação e Compromisso.</strong>
+          </h2>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center text-center">
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 p-4 text-center h-100 rounded">
+            <img src="img/excelencia.jpg" alt="Excelência Artesanal" class="rounded-circle mb-3 mx-auto" style="width:100px;height:100px;">
+            <h4 class="fw-semibold text-verde mb-2">Excelência Artesanal</h4>
+            <p class="text-azul fs-5">Processos refinados, atenção ao detalhe e respeito pela tradição.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="card border-0 p-4 text-center h-100 rounded">
+            <img src="img/producao.jpg" alt="Produção e Seleção" class="rounded-circle mb-3 mx-auto" style="width:100px;height:100px;">
+            <h4 class="fw-semibold text-verde mb-2">Produção e Seleção</h4>
+            <p class="text-azul fs-5">Automação inteligente e supervisão constante em cada lote.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="600">
+          <div class="card border-0 p-4 text-center h-100 rounded">
+            <img src="img/alcance.png" alt="Alcance Global" class="rounded-circle mb-3 mx-auto" style="width:100px;height:100px;">
+            <h4 class="fw-semibold text-verde mb-2">Alcance Global</h4>
+            <p class="text-azul fs-5">Entregas com rigor, rapidez e rastreabilidade em qualquer lugar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Qualidade -->
+  <section id="aboutus" class="hero-section w-100 section-padding overflow-hidden">
+    <div class="container bloco-transparente">
+      <div class="row align-items-start gy-4">
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-12" data-aos="fade-right">
+              <div class="ratio ratio-16x9 rounded bg-cover" style="background-image:url('img/exemplos_farinha.jpg');"></div>
+            </div>
+            <div class="col-6" data-aos="fade-up">
+              <div class="ratio ratio-1x1 rounded bg-cover" style="background-image:url('img/milho.jpg');"></div>
+            </div>
+            <div class="col-6" data-aos="fade-left">
+              <div class="ratio ratio-4x3 rounded bg-cover" style="background-image:url('img/panko-breadcrumbs-2-1200.jpg');"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left">
+          <h3 class="fw-bold border-top border-dark pt-4 text-verde">Do Grão ao Prato</h3>
+          <p class="lead text-azul mt-4">
+            Explicação sobre o panko e as suas vantagens culinárias de forma clara e concisa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- Secção de Logística -->
-<section id="numbers" class="hero-section w-100 bg-gray-100 section-padding overflow-hidden">
-  <div class="container">
+<section id="numbers" class="hero-section w-100 section-padding overflow-hidden">
+  <div class="container bloco-transparente">
     <div class="row align-items-center justify-content-between gy-5">
 
       <!-- Imagem ilustrativa -->
       <div class="col-lg-5" data-aos="fade-right">
-        <div class="rounded shadow-sm p-3 bg-white" style="background: rgba(255,255,255,0.9);">
-          <img src="img/van.png" alt="Carrinha logística" class="img-fluid rounded">
+        <div 
+          class="ratio ratio-16x9 rounded bg-cover" 
+          style="background-image: url('img/van.png');">
         </div>
       </div>
 
@@ -278,17 +168,16 @@
         <h2 class="display-6 fw-bold text-verde mb-4">
           Logística de Alta Performance
         </h2>
-
         <p class="lead text-azul mb-4">
-          <strong>Garantimos entregas eficientes e pontuais</strong>, satisfazendo as exigências do mercado nacional e internacional com rapidez, rastreabilidade e compromisso.
+          <strong>Garantimos entregas eficientes e pontuais</strong>,
+          satisfazendo as exigências do mercado nacional e internacional
+          com rapidez, rastreabilidade e compromisso.
         </p>
-
         <div class="row mt-4">
           <div class="col-md-6 mb-4" data-aos="fade-up">
             <div class="display-1 fw-bold text-verde">99%</div>
             <p class="text-azul small">Satisfação dos nossos parceiros.</p>
           </div>
-
           <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="display-1 fw-bold text-verde">+10</div>
             <p class="text-azul small">Rotas diárias em todo o país.</p>
@@ -300,25 +189,22 @@
   </div>
 </section>
 
-<!-- Identidade -->
-<section id="testimonials" class="hero-section w-100 bg-gray-100 section-padding overflow-hidden" style="min-height: 100vh;">
-  <div class="container">
-
+<!-- Secção: Identidade -->
+<section id="testimonials" class="hero-section w-100 section-padding overflow-hidden">
+  <div class="container bloco-transparente">
     <!-- Título -->
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-lg-10" data-aos="flip-up">
+    <div class="row justify-content-center text-center mb-5" data-aos="flip-up">
+      <div class="col-lg-10">
         <h2 class="display-6 fw-bold text-verde">
           O que nos move e diferencia todos os dias
         </h2>
       </div>
     </div>
-
     <!-- Cartões -->
     <div class="row row-cols-1 row-cols-md-3 g-4">
-
       <!-- Cartão 1 -->
-      <div class="col d-flex">
-        <div class="bg-white rounded shadow-sm p-4 d-flex flex-column justify-content-between w-100 h-100">
+      <div class="col d-flex" data-aos="fade-up">
+        <div class="d-flex flex-column justify-content-between w-100 h-100">
           <p class="lead text-azul mb-4">
             Levamos até si produtos que honram a tradição da gastronomia portuguesa, com qualidade e alma em cada detalhe.
           </p>
@@ -328,10 +214,9 @@
           </div>
         </div>
       </div>
-
       <!-- Cartão 2 -->
-      <div class="col d-flex">
-        <div class="bg-white rounded shadow-sm p-4 d-flex flex-column justify-content-between w-100 h-100">
+      <div class="col d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="d-flex flex-column justify-content-between w-100 h-100">
           <p class="lead text-azul mb-4">
             Somos uma marca com visão de futuro: inovação, rigor e sustentabilidade como pilares de confiança e crescimento.
           </p>
@@ -341,10 +226,9 @@
           </div>
         </div>
       </div>
-
       <!-- Cartão 3 -->
-      <div class="col d-flex">
-        <div class="bg-white rounded shadow-sm p-4 d-flex flex-column justify-content-between w-100 h-100">
+      <div class="col d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex flex-column justify-content-between w-100 h-100">
           <p class="lead text-azul mb-4">
             Comprometidos com valores sólidos: ética, excelência e respeito por quem nos acompanha em cada etapa.
           </p>
@@ -354,64 +238,56 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-
-
 <!-- Secção: Sustentabilidade -->
-<section id="identidade" class="hero-section w-100 bg-gray-100 section-padding overflow-hidden mt-5">
-  <div class="container">
+<section id="identidade" class="hero-section w-100 section-padding overflow-hidden">
+  <div class="container bloco-transparente" data-aos="fade-up">
     <div class="row align-items-center gy-5">
-
+      
       <!-- Título -->
       <div class="col-lg-5" data-aos="fade-right">
         <h2 class="display-6 fw-bold text-verde border-top pt-4">
           Equilíbrio entre Qualidade e Ambiente
         </h2>
       </div>
-
+      
       <!-- Bloco de Texto -->
       <div class="col-lg-7" data-aos="fade-left">
-        <div class="bg-white rounded shadow-sm p-4 p-md-5" style="background: rgba(255,255,255,0.85);">
-          <p class="text-azul fs-4 mb-4 text-justify">
-            <strong>O futuro alimenta-se de escolhas conscientes.</strong> <br>
-            Na <span class="fw-bold text-verde">Crocgold Industry</span>, implementamos práticas sustentáveis em todas as fases do processo:
-          </p>
-
-          <ul class="list-unstyled text-azul fs-5 ps-3 mb-4">
-            <li>✔️ Redução do desperdício alimentar</li>
-            <li>✔️ Eficiência energética</li>
-            <li>✔️ Embalagens recicláveis e biodegradáveis</li>
-            <li>✔️ Fornecimento local e responsável</li>
-          </ul>
-
-          <p class="text-secondary text-justify mb-0 fs-5">
-            É possível crescer com responsabilidade, promovendo o desenvolvimento económico sem comprometer as gerações futuras.
-          </p>
-
-          <footer class="mt-4">
-            <small class="text-muted"><strong>André Pereira</strong>, CEO da Crocgold Industry, Lda.</small>
-          </footer>
-        </div>
+        <p class="text-azul fs-4 mb-4 text-justify">
+          <strong>O futuro alimenta-se de escolhas conscientes.</strong><br>
+          Na <span class="fw-bold text-verde">Crocgold Industry, Lda</span>, implementamos práticas sustentáveis em todas as fases do processo:
+        </p>
+        <ul class="list-unstyled text-azul fs-5 ps-3 mb-4">
+          <li>✔️ Redução do desperdício alimentar</li>
+          <li>✔️ Eficiência energética</li>
+          <li>✔️ Embalagens recicláveis e biodegradáveis</li>
+          <li>✔️ Fornecimento local e responsável</li>
+        </ul>
+        <p class="text-secondary text-justify mb-0 fs-5">
+          É possível crescer com responsabilidade, promovendo o desenvolvimento económico sem comprometer as gerações futuras.
+        </p>
+        <footer class="mt-4 text-end">
+          <small class="text-muted"><strong>André Pereira</strong>, CEO da Crocgold Industry, Lda.</small>
+        </footer>
       </div>
-
+      
     </div>
   </div>
 </section>
 
 <!-- Secção: Sobre / Trabalha Connosco -->
-<section id="workwithus" class="hero-section w-100 bg-gray-100 section-padding overflow-hidden">
-  <div class="container">
+<section id="workwithus" class="hero-section w-100 section-padding overflow-hidden">
+  <div class="container bloco-transparente" data-aos="fade-up">
     
     <!-- Título e Logo -->
     <div class="row justify-content-center text-center mb-5">
       <div class="col-lg-10" data-aos="fade-down">
         <img src="img/crocgold.png" alt="Crocgold Industry" class="img-fluid mb-4" style="max-width: 180px;">
         <h2 class="display-6 fw-bold text-verde">
-          O Panko é a nossa paixão, a equipa a nossa força!
+          O Panko é a nossa paixão — e a nossa equipa, a nossa força!
         </h2>
       </div>
     </div>
@@ -419,61 +295,78 @@
     <!-- Texto principal -->
     <div class="row justify-content-center">
       <div class="col-lg-10" data-aos="fade-up">
-        <div class="bg-white rounded shadow-sm p-4 p-md-5 text-azul" style="background: rgba(255,255,255,0.85); text-align: justify;">
-          
-          <p class="lead fs-4 mb-4">
-            Fundada em 2022, a nossa fábrica dedica-se à produção de panko de alta qualidade, unindo métodos tradicionais a um processo moderno e rigoroso. O nosso panko distingue-se pela sua textura leve, crocante e estaladiça — ideal para empanados, gratinados ou simplesmente para dar um toque especial a qualquer prato.
-<br>Trabalhamos com ingredientes cuidadosamente selecionados e com um controlo de qualidade exigente, garantindo um produto final saboroso, consistente e com excelente desempenho em cozinhas profissionais e domésticas.
-<br>Desde o início, assumimos o compromisso de oferecer um panko autêntico, versátil e adaptado às exigências do mercado. Orgulhamo-nos de ser uma referência na produção nacional de panko, fornecendo tanto para o setor alimentar como para marcas próprias e distribuidores em todo o país.
-          </p>
-
-        </div>
+        <p class="lead text-azul mb-4 text-justify">
+          Fundada em 2022, a nossa fábrica dedica-se à produção de panko de alta qualidade, unindo métodos tradicionais a um processo moderno e rigoroso. O nosso panko distingue‑se pela sua textura leve, crocante e estaladiça — ideal para empanados, gratinados ou simplesmente para dar um toque especial a qualquer prato.
+        </p>
+        <p class="text-azul mb-4 text-justify">
+          Trabalhamos com ingredientes cuidadosamente selecionados e com um controlo de qualidade exigente, garantindo um produto final saboroso, consistente e com excelente desempenho em cozinhas profissionais e domésticas.
+        </p>
+        <p class="text-azul text-justify mb-0">
+          Desde o início, assumimos o compromisso de oferecer um panko autêntico, versátil e adaptado às exigências do mercado. Orgulhamo‑nos de ser uma referência na produção nacional de panko, fornecendo tanto para o setor alimentar como para marcas próprias e distribuidores em todo o país.
+        </p>
       </div>
     </div>
-    
+
   </div>
 </section>
 
 <!-- Secção: Galeria de Imagens -->
-<section id="gallery" class="hero-section w-100 section-padding bg-light overflow-hidden">
-  <div class="container-fluid px-0">
+<section id="gallery" class="hero-section w-100 section-padding overflow-hidden">
+  <div class="container bloco-transparente" data-aos="fade-up">
     
     <!-- Título -->
-    <div class="row">
-      <div class="col-12 text-center mb-5" data-aos="fade-down">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col">
         <h2 class="display-6 fw-bold text-verde">Inspiração em cada detalhe</h2>
         <p class="text-muted lead">Receitas, aplicações e momentos com o nosso panko</p>
       </div>
     </div>
 
-    <!-- Galeria scroll horizontal -->
-    <div class="d-flex overflow-auto gap-4 px-4 py-5 gallery-scroll" data-aos="fade-up">
-      <img src="img/frango_panko.jpg" class="rounded shadow-sm gallery-img" alt="Frango Panko">
-      <img src="img/sushi_1.jpg" class="rounded shadow-sm gallery-img" alt="Sushi">
-      <img src="img/webp/crispy-panko-baked-eggplant-tenders_2sm.webp" class="rounded shadow-sm gallery-img" alt="Beringela Panada">
-      <img src="img/webp/ten-don-15.webp" class="rounded shadow-sm gallery-img" alt="Ten Don">
-      <img src="img/webp/receita-de-fil'e-de-frango-empanado.webp" class="rounded shadow-sm gallery-img" alt="Frango Empanado">
-    </div>
+    <!-- Galeria -->
+    <div class="d-flex overflow-auto gap-4 px-2 py-4 gallery-scroll">
+      
+      <figure class="gallery-item">
+        <img src="img/frango_panko.jpg" alt="Frango Panko" class="gallery-img">
+        <figcaption class="gallery-caption">Frango Panko</figcaption>
+      </figure>
+      
+      <figure class="gallery-item">
+        <img src="img/sushi_1.jpg" alt="Sushi" class="gallery-img">
+        <figcaption class="gallery-caption">Sushi</figcaption>
+      </figure>
+      
+      <figure class="gallery-item">
+        <img src="img/webp/crispy-panko-baked-eggplant-tenders_2sm.webp" alt="Beringela Panada" class="gallery-img">
+        <figcaption class="gallery-caption">Beringela Panada</figcaption>
+      </figure>
+      
+      <figure class="gallery-item">
+        <img src="img/webp/ten-don-15.webp" alt="Ten Don" class="gallery-img">
+        <figcaption class="gallery-caption">Ten Don</figcaption>
+      </figure>
+      
+      <figure class="gallery-item">
+        <img src="img/webp/receita-de-fil'e-de-frango-empanado.webp" alt="Frango Empanado" class="gallery-img">
+        <figcaption class="gallery-caption">Frango Empanado</figcaption>
+      </figure>
 
+    </div>
   </div>
 </section>
-
-
+ 
 <!-- Secção: Newsletter -->
-<section id="newsletter" class="hero-section w-100 section-padding bg-white position-relative">
-  <div class="container">
-    
-    <!-- Título -->
+<section id="newsletter" class="hero-section w-100 section-padding position-relative">
+  <div class="container bloco-transparente" data-aos="fade-up">
     <div class="row justify-content-center text-center mb-5">
-      <div class="col-12 col-lg-10" data-aos="fade-down">
+      <div class="col-12 col-lg-10">
         <h2 class="display-6 fw-bold text-verde mb-3">Subscreva a nossa Newsletter</h2>
-        <p class="lead text-muted">Receba <strong>novidades, conteúdos exclusivos</strong> e promoções diretamente no seu email.</p>
+        <p class="lead text-secondary">
+          Receba <strong>novidades, conteúdos exclusivos</strong> e promoções diretamente no seu email.
+        </p>
       </div>
     </div>
-
-    <!-- Formulário -->
     <div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-12 col-md-10 col-lg-8">
         <form class="row g-2 justify-content-center">
           <div class="col-12 col-sm-8">
             <input type="email" class="form-control form-control-lg" placeholder="O seu email" required>
@@ -488,114 +381,43 @@
   </div>
 </section>
 
-
-<footer class="bg-dark text-white py-4">
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
   <div class="container text-center">
-
-    <!-- Logo -->
-    <div class="mb-3">
+    <div class="mb-4">
       <img src="img/logo_horizontal_branco.png" alt="Crocgold Industry" height="40">
     </div>
-
-    <!-- Morada e Contacto -->
     <p class="small text-white-50 mb-1">
       Rua Padre Manuel Lopes Vilaverde, 215 &middot; 4905-513 Mujães, Viana do Castelo – Portugal
     </p>
     <p class="small text-white-50 mb-3">(+351) 939 777 953</p>
-
-    <!-- Redes Sociais -->
-    <div class="mb-3">
-      <span class="text-success fw-bold d-block mb-2">Siga-nos</span>
+    <div class="mb-4">
+      <span class="text-success fw-bold d-block mb-2">Siga‑nos</span>
       <a href="#" class="text-white-50 me-3 fs-5"><i class="bi bi-instagram"></i></a>
       <a href="#" class="text-white-50 me-3 fs-5"><i class="bi bi-facebook"></i></a>
       <a href="#" class="text-white-50 fs-5"><i class="bi bi-globe"></i></a>
     </div>
-
-    <!-- Direitos -->
     <p class="small text-white-50 mb-0">© 2025 Crocgold Industry, Lda</p>
     <p class="small text-white-50">
-      Desenvolvido por <a href="https://www.invokitdesign.pt" class="text-white text-decoration-underline">INVOKIT</a>
+      Desenvolvido por 
+      <a href="https://www.invokitdesign.pt" class="text-white text-decoration-underline">
+        INVOKIT
+      </a>
     </p>
   </div>
 </footer>
 
 
-
-
-<!-- Scripts JavaScript -->
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  // Inicialização da animação AOS (Animate on Scroll)
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-
-  // Efeito de scroll na barra de navegação
-  const header = document.querySelector(".navbar");
-  const headerHeight = header.offsetHeight;
-
-  window.addEventListener("scroll", () => {
-    const scrollPos = window.scrollY;
-    header.classList.toggle("scrolled", scrollPos >= headerHeight);
-  });
-
-  // Lightbox funcionalidade
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = lightbox.querySelector("img");
-  const images = document.querySelectorAll(".gallery-image");
-  let currentIndex = 0;
-
-  images.forEach((img, index) => {
-    img.addEventListener("click", () => {
-      currentIndex = index;
-      showImage(currentIndex);
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration:1000, once:true });
+    const header = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY >= header.offsetHeight);
     });
-  });
-
-  function showImage(index) {
-    lightboxImg.src = images[index].src;
-    lightbox.classList.add("show");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove("show");
-    document.body.style.overflow = "";
-  }
-
-  document.getElementById("prevBtn").addEventListener("click", (e) => {
-    e.stopPropagation();
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-  });
-
-  document.getElementById("nextBtn").addEventListener("click", (e) => {
-    e.stopPropagation();
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (!lightbox.classList.contains("show")) return;
-
-    switch (e.key) {
-      case "ArrowRight":
-        currentIndex = (currentIndex + 1) % images.length;
-        break;
-      case "ArrowLeft":
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        break;
-      case "Escape":
-        closeLightbox();
-        return;
-    }
-    showImage(currentIndex);
-  });
-</script>
-<script src="js/custom.js"></script>
+  </script>
+  <script src="js/custom.js"></script>
 </body>
 </html>
-
-
