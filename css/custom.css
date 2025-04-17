@@ -6,13 +6,12 @@ html {
 
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-image: url("img/bg-textura.png") !important;
-  background-repeat: repeat !important;
-  background-size: 300px !important;
-  background-attachment: fixed !important;
-  background-position: center center !important;
-  background-color: #eaeaea !important;
-  z-index: 0 !important;
+  background-color: red !important;         /* Cor de fundo visível para teste */
+  background-image: none !important;        /* Garante que não há imagem a interferir */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* ======== PADRÕES ======== */
