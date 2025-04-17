@@ -171,7 +171,7 @@ footer .container {
   padding-bottom: 160px;
 }
 
-/* ======== REMOVER FUNDO BRANCO DE CONTAINERS E BLOCOS ======== */
+/* ======== FUNDO BRANCO TRANSLÚCIDO NOS BLOCOS ======== */
 .hero-section > .container,
 .section-padding > .container,
 #identidade .container,
@@ -179,24 +179,17 @@ footer .container {
 #workwithus .container,
 #numbers .container,
 #testimonials .container {
-  background-color: transparent !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
   padding: 2rem 1rem;
-  border-radius: 0;
-  box-shadow: none !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Remove fundo dos cartões (p/ que fiquem em cima do fundo texturado) */
+/* ======== FUNDO DOS CARTÕES TRANSPARENTE CLARO ======== */
 .card,
 .bg-white,
 .shadow-sm,
 .bg-light {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
-/* ======== EXTRA: Forçar fundo transparente em tudo para DEBUG ======== */
-/* (podes remover depois de confirmar que está a funcionar) */
-* {
-  background-color: transparent !important;
-  box-shadow: none !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
 }
