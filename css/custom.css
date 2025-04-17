@@ -263,3 +263,7 @@ body > footer::before {
   align-items: center;
   justify-content: center;
 }
+/* coloca um gap fixo entre o último link e o botão */
+.navbar-nav .nav-item:last-child {
+  margin-right: 2rem; /* espaço antes do botão */
+}
