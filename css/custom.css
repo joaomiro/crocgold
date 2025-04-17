@@ -6,12 +6,12 @@ html {
 
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-image: url("img/fundo_trigo.webp");
+  background-image: url('img/webp/fundo_trigo.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
-  background-color: #f8f9fa; /* fallback */
+  background-attachment: fixed;
+  background-color: #f8f9fa;
 }
 
 /* ======== PADRÕES ======== */
@@ -24,14 +24,13 @@ section:not(#top):not(#newsletter):not(footer) {
   margin-top: 80px;
 }
 
-/* ======== HERO (boas-vindas) ======== */
+/* ======== HERO ======== */
 #top {
   min-height: 100vh;
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
   overflow: hidden;
-  /* remover background-image daqui */
 }
 
 /* ======== TEXTOS ======== */
@@ -156,7 +155,7 @@ footer .container {
   }
 }
 
-/* ======== TESTEMUNHOS COM ALTURA IGUAL ======== */
+/* ======== TESTIMONIALS: Alinhamento e altura igual ======== */
 #testimonials .row > .col {
   display: flex;
 }
@@ -172,19 +171,22 @@ footer .container {
   padding-bottom: 160px;
 }
 
-/* ======== BLOCO COM FUNDO BRANCO TRANSLÚCIDO ======== */
-section:not(#top):not(#newsletter):not(footer) > .container,
+/* ======== BLOCOS COM FUNDO BRANCO TRANSPARENTE ======== */
+.container,
 .card,
 .bg-white,
+.shadow-sm,
 .bg-light,
-.shadow-sm {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+.rounded,
+.p-4,
+.p-md-5 {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: none !important;
   border-radius: 12px;
-  padding: 2rem;
 }
 
-/* (opcional) efeito vidro fosco moderno */
-section > .container {
-  backdrop-filter: blur(6px);
+/* Para usar transparência total, aplica esta classe extra */
+.transparent-bg {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
