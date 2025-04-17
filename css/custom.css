@@ -5,13 +5,13 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", sans-serif !important;
-  background-image: url("img/webp/fundo_trigo.webp") !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
-  background-color: #f8f9fa !important;
+  font-family: "Helvetica Neue", sans-serif;
+  background-image: url("img/webp/fundo_trigo.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #f8f9fa;
 }
 
 /* ======== PADRÕES ======== */
@@ -31,6 +31,7 @@ section:not(#top):not(#newsletter):not(footer) {
   padding-bottom: 120px;
   position: relative;
   overflow: hidden;
+  background: none !important;
 }
 
 /* ======== TEXTOS ======== */
@@ -38,6 +39,7 @@ section:not(#top):not(#newsletter):not(footer) {
   text-align: justify;
 }
 
+/* Cores institucionais */
 h1, h2, h3, h4, h5, h6,
 strong, .fw-bold {
   color: #008739 !important;
@@ -154,7 +156,7 @@ footer .container {
   }
 }
 
-/* ======== TESTIMONIALS - Alinhamento ======== */
+/* ======== TESTEMUNHOS ======== */
 #testimonials .row > .col {
   display: flex;
 }
@@ -170,26 +172,25 @@ footer .container {
   padding-bottom: 160px;
 }
 
-/* ======== BLOCOS COM FUNDO TRANSPARENTE BRANCO ======== */
+/* ======== ESTILO VISUAL DOS BLOCOS ======== */
 .hero-section > .container,
 .section-padding > .container,
 #identidade .container,
 #aboutus .container,
 #workwithus .container,
 #numbers .container,
-#testimonials .container,
-#newsletter .container {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+#testimonials .container {
+  background-color: rgba(255, 255, 255, 0.92) !important;
   padding: 2rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
 }
 
-/* Cartões transparentes */
+/* Cartões e fundos que queremos transparentes */
 .card,
 .bg-white,
-.bg-light,
-.shadow-sm {
+.shadow-sm,
+.bg-light {
   background-color: transparent !important;
   box-shadow: none !important;
 }
