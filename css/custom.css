@@ -267,3 +267,11 @@ body > footer::before {
 .navbar-nav .nav-item:last-child {
   margin-right: 4rem; /* espaço antes do botão */
 }
+/* Hero title sem quebras só em desktop */
+@media (min-width: 992px) {
+  .hero-text h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* opcional */
+  }
+}
