@@ -6,10 +6,10 @@ html {
 
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-color: red !important;         /* Cor de fundo visível para teste */
-  background-image: none !important;        /* Garante que não há imagem a interferir */
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f8f9fa; /* Cor base clara */
+  background-image: url("img/bg-textura.png");
+  background-repeat: repeat;
+  background-size: 300px;
   background-attachment: fixed;
   background-position: center;
 }
