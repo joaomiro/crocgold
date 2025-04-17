@@ -6,7 +6,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-image: url("img/webp/fundo_trigo.webp");
+  background-image: url("../img/webp/fundo_trigo.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
