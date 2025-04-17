@@ -6,8 +6,8 @@ html {
 
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-color: #f8f9fa; /* Cor base clara */
-  background-image: url("img/bg-textura.png");
+  background-color: #f8f9fa;
+  background-image: url("https://joaomiro.github.io/crocgold/img/bg-textura.png");
   background-repeat: repeat;
   background-size: 300px;
   background-attachment: fixed;
