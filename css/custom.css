@@ -38,7 +38,6 @@ section:not(#top):not(#newsletter):not(footer) {
   text-align: justify;
 }
 
-/* Cores institucionais */
 h1, h2, h3, h4, h5, h6,
 strong, .fw-bold {
   color: #008739 !important;
@@ -155,7 +154,7 @@ footer .container {
   }
 }
 
-/* ======== BLOCO TESTIMONIALS - Alinhamento e altura igual ======== */
+/* ======== TESTIMONIALS - Alinhamento ======== */
 #testimonials .row > .col {
   display: flex;
 }
@@ -171,25 +170,26 @@ footer .container {
   padding-bottom: 160px;
 }
 
-/* ======== FUNDO BRANCO TRANSLÚCIDO NOS BLOCOS ======== */
+/* ======== BLOCOS COM FUNDO TRANSPARENTE BRANCO ======== */
 .hero-section > .container,
 .section-padding > .container,
 #identidade .container,
 #aboutus .container,
 #workwithus .container,
 #numbers .container,
-#testimonials .container {
-  background-color: rgba(255, 255, 255, 0.85) !important;
+#testimonials .container,
+#newsletter .container {
+  background-color: rgba(255, 255, 255, 0.9) !important;
   padding: 2rem 1rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* ======== FUNDO DOS CARTÕES TRANSPARENTE CLARO ======== */
+/* Cartões transparentes */
 .card,
 .bg-white,
-.shadow-sm,
-.bg-light {
-  background-color: rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+.bg-light,
+.shadow-sm {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
