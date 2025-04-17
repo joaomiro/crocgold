@@ -14,12 +14,6 @@ body {
   background-color: #f8f9fa;
 }
 
-/* ======== NAVBAR ======== */
-.navbar {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
 /* ======== PADRÕES ======== */
 .section-padding {
   padding-top: 120px;
@@ -161,7 +155,7 @@ footer .container {
   }
 }
 
-/* ======== TESTIMONIALS ALTURA E ALINHAMENTO ======== */
+/* ======== BLOCO TESTIMONIALS - Alinhamento e altura igual ======== */
 #testimonials .row > .col {
   display: flex;
 }
@@ -177,9 +171,7 @@ footer .container {
   padding-bottom: 160px;
 }
 
-/* ======== REMOVER FUNDOS BRANCOS ======== */
-
-/* Containers principais transparentes */
+/* ======== REMOVER FUNDO BRANCO DE CONTAINERS E BLOCOS ======== */
 .hero-section > .container,
 .section-padding > .container,
 #identidade .container,
@@ -190,15 +182,14 @@ footer .container {
   background-color: transparent !important;
   padding: 2rem 1rem;
   border-radius: 0;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
-/* Cartões e sombras */
+/* Remove fundo dos cartões (p/ que fiquem em cima do fundo texturado) */
 .card,
 .bg-white,
 .shadow-sm,
-.bg-light,
-.bg-gray-100 {
+.bg-light {
   background-color: transparent !important;
   box-shadow: none !important;
 }
