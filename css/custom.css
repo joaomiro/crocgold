@@ -158,3 +158,6 @@ footer .container {
 #testimonials .col > div {
   min-height: 100%;
 }
+#testimonials {
+  padding-bottom: 160px;
+}
