@@ -281,45 +281,41 @@ body > footer::before {
     overflow: hidden;        /* esconde o excesso se ultrapassar */
   }
 }
-/* ======== SERVIÇOS: cartões independentes ======== */
-#servicos > .container.bloco-transparente {
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-#servicos .row.g-4 .col > div {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
-}
-/* ======== SERVIÇOS: glass block no título ======== */
+/* ======== SEÇÃO SERVIÇOS ======== */
+
+/* 1) Título dentro de vidro (primeiro bloco) */
 #servicos > .container.bloco-transparente:first-of-type {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
   margin-bottom: 2rem;
 }
 
-/* ======== SERVIÇOS: cartões individuais ======== */
+/* 2) Remove o vidro do container que envolve todos os cartões */
+#servicos > .container.bloco-transparente:nth-of-type(2) {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* 3) Estiliza cada cartão individual */
 #servicos .row.g-4 .col > div {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-  margin: 0 1rem 2rem; /* 1rem lateral, 2rem em baixo */
+  margin: 0 1rem 2rem;
   transition: transform 0.2s ease;
 }
 #servicos .row.g-4 .col > div:hover {
   transform: translateY(-4px);
 }
 
-/* Ajuste mobile: espaço vertical entre cartões */
+/* 4) Espaçamento extra no mobile */
 @media (max-width: 767px) {
   #servicos .row.g-4 .col {
     margin-bottom: 1.5rem;
