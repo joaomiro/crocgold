@@ -283,46 +283,40 @@ body > footer::before {
 }
 
 
-/* ======== SEÇÃO SERVIÇOS – estilo “hero” para os cartões ======== */
-
-/* 1) Título dentro de vidro (primeiro bloco) */
-#servicos > .container.bloco-transparente:first-of-type {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(8px);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-/* 2) Remove o vidro do container que envolve todos os cartões */
-#servicos > .container.bloco-transparente:nth-of-type(2) {
-  background: transparent !important;
-  backdrop-filter: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-/* 3) Cartões individuais com estilo “hero” */
-#servicos .row.g-4 .col > div.bloco-transparente {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(8px) !important;
-  padding: 2rem !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
-  margin: 0 1rem 2rem !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#servicos .row.g-4 .col > div.bloco-transparente:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* 4) Espaçamento extra no mobile */
+/* ======== SEÇÃO SERVIÇOS – ajustes mobile ======== */
 @media (max-width: 767px) {
+  /* força 1 coluna full‑width para cada .col */
+  #servicos .row.g-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   #servicos .row.g-4 .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
     margin-bottom: 1.5rem;
   }
+
+  /* bloco-transparente ocupa quase toda a largura e tem padding reduzido */
+  #servicos .row.g-4 .col > div.bloco-transparente {
+    width: 95%;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    backdrop-filter: saturate(180%) blur(8px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  /* remove escala no hover (não funciona bem em touch) */
+  #servicos .row.g-4 .col > div.bloco-transparente:hover {
+    transform: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  /* diminui o brilho radial para não atrapalhar legibilidade */
+  #servicos .row.g-4 .col > div.bloco-transparente::before {
+    display: none;
+  }
 }
+
 
