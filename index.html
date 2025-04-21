@@ -4,82 +4,83 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Crocgold Industry, Lda</title>
+  <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Tailwind Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Opcional: configurações de cores em tailwind.config -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            verde: '#17833d',
-            azul:  '#005a94'
-          }
-        }
-      }
-    }
-  </script>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Empresa portuguesa especializada em farinhas de qualidade, panificação, inovação alimentar e sustentabilidade.">
+  <meta name="keywords" content="Crocgold, farinhas, panko, milho, trigo, Portugal, agroalimentar">
+  <meta name="robots" content="index, follow">
 
-  <!-- Alpine.js (reativo) -->
-  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Crocgold Industry">
+  <meta property="og:description" content="Produtos alimentares de alta qualidade para panificação, pastelaria e indústria.">
+  <meta property="og:image" content="https://joaomiro.github.io/crocgold/img/croc_logo.png">
+  <meta property="og:url" content="https://joaomiro.github.io/crocgold/">
+  <meta property="og:type" content="website">
 
-  <!-- AOS (animações on‑scroll) -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Crocgold Industry">
+  <meta name="twitter:description" content="Farinhas produzidas em Portugal.">
+  <meta name="twitter:image" content="https://joaomiro.github.io/crocgold/img/croc_logo.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/theme.min.css">
+  <link rel="stylesheet" href="css/responsive.min.css">
+  <link rel="stylesheet" href="css/custom.css"> <!-- custom por último -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
-<body class="bg-fixed bg-center bg-cover" style="background-image:url('img/webp/fundo_trigo.webp')">
-  <!-- Navbar -->
-  <nav x-data="{ open: false }"
-       class="fixed top-0 inset-x-0 z-50 bg-white bg-opacity-90 backdrop-blur-md shadow transition p-3">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#top">
-        <img src="img/logo_horizontal.png" alt="Crocgold" class="h-14 transition-all duration-300"
-             :class="{ 'h-10': window.scrollY > 80 }"
-             x-init="window.addEventListener('scroll', () => $el.querySelector('img').classList.toggle('h-10', window.scrollY>80))">
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="navScroll">
+  <div class="container bloco-transparente">
+    <a class="navbar-brand" href="#top">
+      <img src="img/logo_horizontal.png" alt="Crocgold Industry" height="56">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-center text-lg-start">
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#aboutus">Qualidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="#numbers">Logística</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Identidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="#identidade">Sustentabilidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="#workwithus">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+      </ul>
+      <a href="https://catalogo" class="btn btn-outline-dark ms-lg-4">
+        Catálogo <i class="bi bi-download"></i>
       </a>
-      <!-- Mobile toggle -->
-      <button @click="open = !open" class="md:hidden text-2xl text-azul">
-        <i class="bi bi-list"></i>
-      </button>
-      <!-- Links -->
-      <div :class="open ? 'block' : 'hidden'" class="md:flex md:items-center space-y-2 md:space-y-0 md:space-x-6">
-        <a href="#servicos" class="text-azul hover:text-verde transition">Serviços</a>
-        <a href="#aboutus"  class="text-azul hover:text-verde transition">Qualidade</a>
-        <a href="#numbers"  class="text-azul hover:text-verde transition">Logística</a>
-        <a href="#testimonials" class="text-azul hover:text-verde transition">Identidade</a>
-        <a href="#identidade"   class="text-azul hover:text-verde transition">Sustentabilidade</a>
-        <a href="#workwithus"   class="text-azul hover:text-verde transition">Sobre</a>
-        <a href="#gallery"      class="text-azul hover:text-verde transition">Galeria</a>
-        <a href="https://catalogo"
-           class="ml-2 px-4 py-2 border border-verde text-verde rounded hover:bg-verde hover:text-white transition">
-          Catálogo <i class="bi bi-download"></i>
-        </a>
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
- <!-- Hero -->
-  <section id="top"
-           class="relative flex items-center justify-center min-h-screen">
-    <!-- fundo já está no <body> via inline-style -->
+<!-- Hero Section -->
+<section id="top" class="hero-section">
 
-    <div data-aos="fade-up" data-aos-delay="200"
-         class="bg-white bg-opacity-70 backdrop-blur-lg p-8 md:p-16 rounded-2xl shadow-xl max-w-3xl text-center">
-      <h1 class="text-4xl md:text-5xl font-extrabold text-verde mb-4">
-        Delicie-se com a nossa Seleção de Produtos!
-      </h1>
-      <p class="text-lg text-azul">
-        Fundada em 2022, a <strong>Crocgold Industry, Lda</strong> é uma
-        empresa portuguesa dedicada à produção e exportação de produtos alimentares.
-      </p>
-      <button class="mt-6 px-6 py-3 bg-verde text-white font-semibold rounded-lg hover:scale-105
-                     transform transition duration-300">
-        Saber Mais
-      </button>
-    </div>
-  </section>
+  <!-- Glass‑morphism text block -->
+  <div
+    class="container hero-text position-relative"
+    style="z-index: 1;"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    <h1>Delicie-se com a nossa Seleção de Produtos!</h1>
+    <p>
+      Fundada em 2022, a <strong>Crocgold Industry, Lda</strong> é uma
+      empresa portuguesa exclusivamente dedicada à produção e exportação de
+      produtos alimentares, com foco na panificação e pastelaria.
+    </p>
+  </div>
+</section>
 
 <!-- Secção de Serviços -->
 <section id="servicos" class="section-padding overflow-hidden">
@@ -458,9 +459,6 @@
 </script>
 <script src="js/custom.js"></script>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true });
-</script>
 </body>
 </html>
+
