@@ -320,3 +320,10 @@ body > footer::before {
 }
 
 
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
