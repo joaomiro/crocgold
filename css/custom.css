@@ -283,15 +283,15 @@ body > footer::before {
 }
 
 
-/* ======== SEÇÃO SERVIÇOS ======== */
+/* ======== SEÇÃO SERVIÇOS – estilo “hero” para os cartões ======== */
 
 /* 1) Título dentro de vidro (primeiro bloco) */
 #servicos > .container.bloco-transparente:first-of-type {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
 
@@ -303,16 +303,17 @@ body > footer::before {
   padding: 0 !important;
 }
 
-/* 3) Estiliza cada cartão individual com transparência, cantos arredondados e drop‑shadow */
+/* 3) Cartões individuais com estilo “hero” */
 #servicos .row.g-4 .col > div.bloco-transparente {
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(4px) !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(8px) !important;
   padding: 2rem !important;
-  border-radius: 16px !important;
+  border-radius: 12px !important;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
   margin: 0 1rem 2rem !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 #servicos .row.g-4 .col > div.bloco-transparente:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
@@ -324,3 +325,4 @@ body > footer::before {
     margin-bottom: 1.5rem;
   }
 }
+
