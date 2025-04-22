@@ -302,29 +302,34 @@
     </div>
   </section>
 
-<!-- Newsletter Section -->
+<!-- Newsletter Section (texto centrado) -->
 <section
   id="newsletter"
   class="py-16 px-6 md:px-12 bg-transparent relative"
 >
-  <!-- Fundo fixo (opcional, mas assegura o mesmo efeito do resto) -->
+  <!-- Fundo fixo -->
   <div
     class="absolute inset-0 bg-fixed bg-center bg-cover"
     style="background-image:url('img/webp/fundo_trigo.webp')"
   ></div>
 
-  <!-- Conteúdo com glassmorphism leve -->
-  <div class="relative z-10 max-w-4xl mx-auto bg-white bg-opacity-50 backdrop-blur-md rounded-2xl p-8 text-center">
+  <!-- Conteúdo centralizado -->
+  <div
+    class="relative z-10 max-w-2xl mx-auto bg-white bg-opacity-50 backdrop-blur-md rounded-2xl p-8 text-center"
+    data-aos="fade-up"
+  >
     <h2 class="text-3xl font-semibold text-verde mb-4">
       Subscreva a nossa Newsletter
     </h2>
-    <p class="text-base text-azul mb-6 text-justify">
+    <p class="text-base text-azul mb-6">
       Receba conteúdos exclusivos e promoções diretamente no seu email.
     </p>
-    <form class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up">
+    <form class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="100">
       <input
-        type="email" required placeholder="O seu email"
-        class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-verde"
+        type="email"
+        required
+        placeholder="O seu email"
+        class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-verde mx-auto"
       />
       <button
         type="submit"
@@ -336,23 +341,36 @@
   </div>
 </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-12">
-    <div class="max-w-7xl mx-auto text-center space-y-4">
-      <img src="img/logo_horizontal_branco.png" alt="Crocgold Industry" class="mx-auto h-10">
-      <p class="text-sm text-gray-400">Rua Padre Manuel Lopes Vilaverde, 215 · 4905-513 Mujães, Viana do Castelo – Portugal</p>
-      <p class="text-sm text-gray-400">(+351) 939 777 953</p>
-      <div class="flex justify-center gap-4">
-        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-instagram fs-5"></i></a>
-        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-facebook fs-5"></i></a>
-        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-globe fs-5"></i></a>
-      </div>
-      <p class="text-xs text-gray-500">© 2025 CrocGold Industry, Lda</p>
-      <p class="text-xs text-gray-500">
-        Desenvolvido por <a href="https://www.invokitdesign.pt" class="underline hover:text-white">INVOKIT</a>
-      </p>
+<!-- Footer Melhorado -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+    <!-- Logo e Copy -->
+    <div class="text-center md:text-left">
+      <img src="img/logo_horizontal_branco.png" alt="Crocgold Industry" class="mx-auto md:mx-0 h-12 mb-4">
+      <p class="text-sm">&copy; 2025 Crocgold Industry, Lda</p>
+      <p class="text-xs mt-2">Desenvolvido por <a href="https://www.invokitdesign.pt" class="underline hover:text-white">INVOKIT</a></p>
     </div>
-  </footer>
+
+    <!-- Contato -->
+    <div class="text-center">
+      <h3 class="text-lg font-semibold text-white mb-3">Contactos</h3>
+      <p class="text-sm">Rua Padre Manuel Lopes Vilaverde, 215</p>
+      <p class="text-sm">4905-513 Mujães, Viana do Castelo – Portugal</p>
+      <p class="text-sm mt-2">(+351) 939 777 953</p>
+    </div>
+
+    <!-- Redes Sociais -->
+    <div class="text-center md:text-right">
+      <h3 class="text-lg font-semibold text-white mb-3">Siga‑nos</h3>
+      <div class="flex justify-center md:justify-end gap-4">
+        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-globe fs-4"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
   <!-- AOS & Alpine Init -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
