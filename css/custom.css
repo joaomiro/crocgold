@@ -1,341 +1,41 @@
-/* ======== GLOBAL RESET ======== */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* custom.css: apenas estilos que o Tailwind não cobre nativamente */
 
-/* ======== HTML & BODY ======== */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 70px; /* altura da navbar */
-}
-
-body {
-  font-family: "Helvetica Neue", sans-serif;
-  background: url("../img/webp/fundo_trigo.webp") no-repeat center center fixed;
-  background-size: cover;
-  color: #005a94;
-  line-height: 1.6;
-}
-
-/* ======== NAVBAR ======== */
-.navbar {
-  position: fixed !important;
-  top: 0; left: 0; right: 0;
-  background: rgba(255, 255, 255, 0.95) !important;
-  padding: 0.4rem 1rem;
-  border-radius: 0 !important;
-  box-shadow: none;
-  z-index: 1030;
-  transition: padding 0.3s ease, box-shadow 0.3s ease;
-}
-.navbar.scrolled {
-  padding: 0.2rem 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-.navbar .container {
-  max-width: 100%;
-  padding: 0 1rem;
-}
-.navbar-brand img {
-  height: 48px;
-  transition: height 0.3s ease;
-}
-.navbar.scrolled .navbar-brand img {
-  height: 40px;
-}
-.navbar-nav .nav-link {
-  color: #005a94;
-  padding: 0.5rem 0.75rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-.navbar-nav .nav-link:hover {
-  color: #003f66;
-}
-.btn-outline-dark {
-  border-color: #005a94;
-  color: #005a94;
-}
-.btn-outline-dark:hover {
-  background: #005a94;
-  color: #fff;
-}
-/* remove bloco-transparente styling from inside navbar */
-.navbar .bloco-transparente {
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-/* ======== HERO SECTION ======== */
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-.hero-section .position-absolute {
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.hero-text {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-.hero-text h1 {
-  color: #17833d;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.hero-text p {
-  color: #005a94;
-  font-size: 1.125rem;
-}
-
-/* ======== SECTION STANDARD PADDING ======== */
-.section-padding {
-  padding: 6rem 0;
-}
-section:not(#top):not(#newsletter):not(body > footer) {
-  margin-top: 4rem;
-}
-
-/* ======== TRANSPARENT BLOCK ======== */
-.bloco-transparente {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* ======== TYPOGRAPHY ======== */
-h1, h2, h3, h4, h5, h6,
-strong, .fw-bold {
-  color: #17833d !important;
-}
-p, li, span, .lead, .text-secondary {
-  color: #005a94 !important;
-}
-a, .nav-link {
-  color: #005a94;
-  text-decoration: none;
-}
-a:hover, .nav-link:hover {
-  color: #003f66;
-}
-
-/* ======== GALLERY ======== */
-.gallery-scroll {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  gap: 1rem;
-  padding-bottom: 1rem;
-}
-.gallery-img {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-.gallery-img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-/* ======== TESTIMONIALS / IDENTITY ======== */
-#testimonials .row > .col {
-  display: flex;
-}
-#testimonials .d-flex {
-  flex-direction: column;
-  justify-content: space-between;
-}
-#testimonials {
-  padding: 6rem 0;
-}
-
-/* ======== NEWSLETTER ======== */
-#newsletter {
-  padding: 6rem 0;
-}
-#newsletter .bloco-transparente {
-  max-width: 800px;
-  margin: 0 auto;
-}
-#newsletter input:focus,
-#newsletter button:focus {
-  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
-  border-color: #198754;
-}
-
-/* ======== PAGE FOOTER ======== */
-body > footer {
-  background: #343a40;
-  padding: 4rem 0;
-  color: #fff;
-}
-body > footer .bi {
-  margin: 0 0.5rem;
-  transition: color 0.3s ease;
-}
-body > footer .bi:hover {
-  color: #f8f9fa;
-}
-body > footer p.small,
-body > footer a {
-  font-weight: 400;
-  opacity: 0.8;
-  margin-bottom: 0.25rem;
-}
-body > footer::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin-bottom: 1rem;
-}
-
-/* ======== INTERNAL FOOTER RESET ======== */
-.bloco-transparente footer {
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  color: inherit !important;
-}
-
-/* ======== RESPONSIVE ======== */
-@media (max-width: 576px) {
-  .hero-text {
-    padding: 1.5rem;
-  }
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  .gallery-img {
-    width: 180px;
-    height: 120px;
-  }
-  .navbar-nav .nav-link {
-    padding: 0.5rem;
-  }
-}
-/* ======== Ajuste de Lightbox/Modal ======== */
-/* Para o modal Bootstrap */
-#galleryModalImg {
-  max-width: 90vw;
-  max-height: 90vh;
-  width: auto;
-  height: auto;
-}
-
-/* Para o lightbox custom */
-.lightbox-img {
-  max-width: 90vw;
-  max-height: 90vh;
-  width: auto;
-  height: auto;
-}
-
-/* Garantir centragens no conteúdo do modal/lightbox */
-#galleryModal .modal-content,
-#lightbox-overlay.show {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* coloca um gap fixo entre o último link e o botão */
-.navbar-nav .nav-item:last-child {
-  margin-right: 4rem; /* espaço antes do botão */
-}
-/* Hero title sem quebras só em desktop */
-@media (min-width: 992px) {
-  .hero-text h1 {
-    white-space: nowrap;
-    overflow: hidden;
-  }
-}
-/* só no desktop (>992px) força sem quebra de linha */
-@media (min-width: 992px) {
-  .hero-text h1 {
-    white-space: nowrap;    /* sem quebras de linha */
-    overflow: hidden;        /* esconde o excesso se ultrapassar */
+/* ======== Base Layer ======== */
+@layer base {
+  /* Smooth scrolling e compensação para a navbar fixa */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
   }
 }
 
-
-/* ======== SEÇÃO SERVIÇOS – ajustes mobile ======== */
-@media (max-width: 767px) {
-  /* força 1 coluna full‑width para cada .col */
-  #servicos .row.g-4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ======== Components Layer ======== */
+@layer components {
+  /* Galeria com scroll‑snap horizontal */
+  .gallery-scroll {
+    @apply flex overflow-x-auto snap-x snap-mandatory gap-6 px-4;
   }
-  #servicos .row.g-4 .col {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 0;
-    margin-bottom: 1.5rem;
-  }
-
-  /* bloco-transparente ocupa quase toda a largura e tem padding reduzido */
-  #servicos .row.g-4 .col > div.bloco-transparente {
-    width: 95%;
-    padding: 1.5rem !important;
-    border-radius: 12px !important;
-    backdrop-filter: saturate(180%) blur(8px) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
-  }
-
-  /* remove escala no hover (não funciona bem em touch) */
-  #servicos .row.g-4 .col > div.bloco-transparente:hover {
-    transform: none;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
-  }
-
-  /* diminui o brilho radial para não atrapalhar legibilidade */
-  #servicos .row.g-4 .col > div.bloco-transparente::before {
-    display: none;
+  .gallery-scroll > img {
+    @apply snap-start flex-shrink-0;
   }
 }
 
-
-.feature-icon {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-.bg-cover {
-  background-size: cover;
-  background-position: center;
+/* ======== Utilities Layer ======== */
+@layer utilities {
+  /* Foco personalizado para inputs e botões */
+  .focus-ring {
+    @apply outline-none ring-2 ring-verde ring-offset-2;
+  }
 }
 
-.ratio {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ======== Scrollbar Customizada (WebKit) ======== */
+::-webkit-scrollbar {
+  height: 8px;
 }
-.ratio:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #17833d;
+  border-radius: 4px;
 }
