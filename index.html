@@ -142,23 +142,22 @@
   class="py-16 px-6 md:px-12 mt-16 bg-transparent"
 >
   <div
-    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center"
+    class="max-w-7xl mx-auto grid grid-cols-1 lg:[grid-template-columns:auto_1fr] gap-12 items-center justify-center"
   >
-    <!-- Imagem com altura fixa -->
-    <div data-aos="fade-right">
+    <!-- Imagem com largura natural -->
+    <div data-aos="fade-right" class="w-auto">
       <img
         src="img/panko-breadcrumbs-1-1200.jpg"
         alt="Panko Breadcrumbs"
-        class="w-full rounded-2xl shadow-lg object-contain
-               h-[512px] md:h-[512px]"
+        class="h-[512px] rounded-2xl shadow-lg object-contain"
       />
     </div>
 
-    <!-- Texto no painel glassmorphism com mesma altura -->
+    <!-- Texto no painel glass, ocupa o resto -->
     <div
       data-aos="fade-left"
       class="bg-white bg-opacity-80 backdrop-blur-lg rounded-2xl
-             px-8 py-8 h-[512px] md:h-[512px] flex flex-col justify-center"
+             px-8 py-8 h-[512px] flex flex-col justify-center"
     >
       <h3 class="text-3xl font-semibold text-verde mb-4">Do Grão ao Prato</h3>
       <p class="text-base leading-relaxed text-azul mb-4">
@@ -176,8 +175,6 @@
     </div>
   </div>
 </section>
-
-
 
 <!-- Testimonials / Identity Section (com background reveal) -->
 <section id="testimonials" class="relative py-16 px-6 md:px-12">
