@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
   }
+  /* Justificar todos os parágrafos */
+  p {
+    @apply text-justify;
+  }
 }
 
 /* ======== Components Layer ======== */
@@ -25,6 +29,10 @@
   /* Foco personalizado para inputs e botões */
   .focus-ring {
     @apply outline-none ring-2 ring-verde ring-offset-2;
+  }
+  /* Texto justificado (classe utilitária, se necessário) */
+  .text-justify {
+    @apply text-justify;
   }
 }
 
