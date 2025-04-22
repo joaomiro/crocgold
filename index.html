@@ -134,45 +134,57 @@
 <!-- Gap para ver o fundo, como no Hero -->
 <section class="h-16"></section>
 
-<!-- About Us Section -->
+<!-- About Us Section with nova fotografia -->
 <section
   id="aboutus"
   class="py-16 px-6 md:px-12 mt-16 bg-transparent"
 >
   <div
-    class="max-w-7xl mx-auto grid grid-cols-1 lg:[grid-template-columns:auto_1fr] gap-12 items-center justify-center"
+    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-start justify-center"
   >
-    <!-- Imagem com largura natural -->
-    <div data-aos="fade-right" class="w-auto">
+    <!-- Fotografia existente -->
+    <div data-aos="fade-right">
       <img
         src="img/panko-breadcrumbs-1-1200.jpg"
         alt="Panko Breadcrumbs"
-        class="h-[512px] rounded-2xl shadow-lg object-contain"
+        class="w-full rounded-2xl shadow-lg object-contain
+               h-auto md:h-64"
       />
     </div>
 
-    <!-- Texto no painel glass, ocupa o resto -->
+    <!-- Nova fotografia "Ten Don" -->
+    <div data-aos="fade-up" data-aos-delay="100">
+      <img
+        src="img/webp/ten-don-15.webp"
+        alt="Ten Don"
+        class="w-full rounded-2xl shadow-lg object-contain
+               h-auto md:h-64"
+      />
+    </div>
+
+    <!-- Bloco de texto -->
     <div
       data-aos="fade-left"
       class="bg-white bg-opacity-80 backdrop-blur-lg rounded-2xl
-             px-8 py-8 h-[512px] flex flex-col justify-center"
+             px-8 py-16"
     >
       <h3 class="text-3xl font-semibold text-verde mb-4">Do Grão ao Prato</h3>
-      <p class="text-base leading-relaxed text-azul mb-4">
+      <p class="text-base leading-relaxed text-azul mb-4 text-justify">
         O <strong class="font-bold text-azul">panko</strong> é um tipo de pão ralado originário
         do Japão, muito usado na culinária asiática e que tem ganho popularidade em várias partes
         do mundo. Ao contrário do pão ralado tradicional, o panko é feito a partir de pão branco
         sem côdea, o que lhe dá uma textura mais leve, crocante e em flocos maiores.
       </p>
-      <p class="text-base leading-relaxed text-azul">
+      <p class="text-base leading-relaxed text-azul text-justify">
         Esta característica faz com que os alimentos empanados com panko fiquem mais estaladiços
         e absorvam menos gordura durante a fritura, resultando em pratos mais leves e crocantes.
-        <br><br>É ideal para empanar carnes, peixes, mariscos ou até legumes. Também funciona como cobertura
+        É ideal para empanar carnes, peixes, mariscos ou até legumes. Também funciona como cobertura
         em gratinados ou para dar um toque crocante a saladas e outras receitas.
       </p>
     </div>
   </div>
 </section>
+
 
 <!-- Gap para ver o fundo, como no Hero -->
 <section class="h-16"></section>
