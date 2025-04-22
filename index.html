@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt" x-data="{ scrollTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'center' }); } }">
+<html lang="pt" x-data="{
+  scrollTo(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,8 +50,9 @@
   <nav class="fixed top-0 inset-x-0 z-50 bg-white bg-opacity-90 backdrop-blur-md shadow py-4">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
       <a href="#top" @click.prevent="scrollTo('top')">
-        <img src="img/logo_horizontal.png" alt="Crocgold" class="h-14 transition-all duration-300"
-             x-bind:class="{'h-10': window.scrollY > 80}"
+        <img src="img/logo_horizontal.png" alt="Crocgold"
+             class="h-14 transition-all duration-300"
+             x-bind:class="{ 'h-10': window.scrollY > 80 }"
              x-init="window.addEventListener('scroll', () => $el.querySelector('img').classList.toggle('h-10', window.scrollY>80))">
       </a>
       <div class="hidden md:flex md:items-center space-x-6">
@@ -58,7 +63,8 @@
         <button @click="scrollTo('identidade')"   class="text-azul hover:text-verde transition">Sustentabilidade</button>
         <button @click="scrollTo('workwithus')"   class="text-azul hover:text-verde transition">Sobre</button>
         <button @click="scrollTo('gallery')"      class="text-azul hover:text-verde transition">Galeria</button>
-        <a href="https://catalogo" class="ml-4 px-4 py-2 border border-verde text-verde rounded-lg hover:bg-verde hover:text-white transition">
+        <a href="https://catalogo"
+           class="ml-4 px-4 py-2 border border-verde text-verde rounded-lg hover:bg-verde hover:text-white transition">
           Catálogo <i class="bi bi-download"></i>
         </a>
       </div>
@@ -79,12 +85,18 @@
 
   <!-- Hero Section -->
   <section id="top" class="relative flex items-center justify-center min-h-screen pt-16">
-    <div data-aos="fade-up" data-aos-delay="200" class="bg-white bg-opacity-70 backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-16 text-center max-w-3xl mx-auto">
+    <div data-aos="fade-up" data-aos-delay="200"
+         class="bg-white bg-opacity-70 backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-16 text-center max-w-3xl mx-auto">
       <h1 class="text-5xl font-extrabold text-verde mb-4">Delicie-se com a nossa Seleção de Produtos!</h1>
-      <p class="text-base leading-relaxed text-azul text-justify mb-6">
-        <br>Fundada em 2022, a Crocgold Industry, Lda é uma empresa portuguesa dedicada à produção e exportação de produtos alimentares, com foco na panificação e pastelaria.
+      <p class="text-base leading-relaxed text-azul mb-6">
+        Fundada em 2022, a Crocgold Industry, Lda é uma empresa portuguesa exclusivamente
+        dedicada à produção e exportação de produtos alimentares, com foco na panificação
+        e pastelaria.
       </p>
-      <button @click.prevent="scrollTo('servicos')" class="px-6 py-3 bg-verde text-white font-semibold rounded-lg hover:scale-105 transform transition duration-300">Saber Mais</button>
+      <button @click.prevent="scrollTo('servicos')"
+              class="px-6 py-3 bg-verde text-white font-semibold rounded-lg hover:scale-105 transform transition duration-300">
+        Saber Mais
+      </button>
     </div>
   </section>
 
@@ -93,27 +105,29 @@
     <div class="max-w-7xl mx-auto">
       <div data-aos="fade-down" class="text-center mb-12">
         <h2 class="text-4xl font-bold text-verde leading-tight">
-          <span class="block text-azul">
-            Razões pelas quais os nossos parceiros confiam em nós:
-          </span>
-          <span class="block font-extrabold text-verde">
-            Tradição, Inovação e Compromisso.
-          </span>
+          <span class="block text-azul">Razões pelas quais os nossos parceiros confiam em nós:</span>
+          <span class="block font-extrabold text-verde">Tradição, Inovação e Compromisso.</span>
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center">
-          <img src="img/trophy.png" alt="Excelência Artesanal" class="mx-auto mb-4 w-16 h-16 object-contain">
+        <div data-aos="fade-up" data-aos-delay="100"
+             class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center">
+          <img src="img/trophy.png" alt="Excelência Artesanal"
+               class="mx-auto mb-4 w-16 h-16 object-contain">
           <h4 class="text-2xl font-semibold text-verde mb-2">Excelência Artesanal</h4>
           <p class="text-base text-azul">Processos refinados, atenção ao detalhe e respeito pela tradição.</p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center">
-          <img src="img/gear.png" alt="Produção e Seleção" class="mx-auto mb-4 w-16 h-16 object-contain">
+        <div data-aos="fade-up" data-aos-delay="200"
+             class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center">
+          <img src="img/gear.png" alt="Produção e Seleção"
+               class="mx-auto mb-4 w-16 h-16 object-contain">
           <h4 class="text-2xl font-semibold text-verde mb-2">Produção e Seleção</h4>
           <p class="text-base text-azul">Automação inteligente e supervisão constante em cada lote.</p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center">
-          <img src="img/truck.png" alt="Alcance Global" class="mx-auto mb-4 w-16 h-16 object-contain">
+        <div data-aos="fade-up" data-aos-delay="300"
+             class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center">
+          <img src="img/truck.png" alt="Alcance Global"
+               class="mx-auto mb-4 w-16 h-16 object-contain">
           <h4 class="text-2xl font-semibold text-verde mb-2">Alcance Global</h4>
           <p class="text-base text-azul">Entregas com rigor, rapidez e rastreabilidade em qualquer lugar.</p>
         </div>
@@ -121,32 +135,24 @@
     </div>
   </section>
 
- <!-- About Us Section -->
+  <!-- About Us Section -->
   <section id="aboutus" class="py-16 px-6 md:px-12 bg-gray-50">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <!-- Imagem -->
-      <div data-aos="fade-right">
-        <img src="img/panko-breadcrumbs-1-1200.jpg"
-             alt="Panko Breadcrumbs"
-             class="w-full rounded-2xl shadow-lg object-cover">
-      </div>
-      <!-- Texto -->
+      <img src="img/panko-breadcrumbs-1-1200.jpg" alt="Panko Breadcrumbs"
+           class="w-full rounded-2xl shadow-lg object-cover" data-aos="fade-right">
       <div data-aos="fade-left">
-        <h3 class="text-3xl font-semibold text-verde mb-4">
-          Do Grão ao Prato
-        </h3>
-        <p class="text-base leading-relaxed text-azul mb-6">
-          O <strong class="font-bold text-azul">panko</strong> é um tipo de pão ralado
-          originário do Japão, muito usado na culinária asiática e que tem ganho popularidade
-          em várias partes do mundo. Ao contrário do pão ralado tradicional, o panko
-          é feito a partir de pão branco sem côdea, o que lhe dá uma textura mais leve,
-          crocante e em flocos maiores.
+        <h3 class="text-3xl font-semibold text-verde mb-4">Do Grão ao Prato</h3>
+        <p class="text-base leading-relaxed text-azul mb-4">
+          O <strong class="font-bold text-azul">panko</strong> é um tipo de pão ralado originário
+          do Japão, muito usado na culinária asiática e que tem ganho popularidade em várias partes
+          do mundo. Ao contrário do pão ralado tradicional, o panko é feito a partir de pão branco
+          sem côdea, o que lhe dá uma textura mais leve, crocante e em flocos maiores.
         </p>
         <p class="text-base leading-relaxed text-azul">
           Esta característica faz com que os alimentos empanados com panko fiquem mais estaladiços
           e absorvam menos gordura durante a fritura, resultando em pratos mais leves e crocantes.
-          É ideal para empanar carnes, peixes, mariscos ou até legumes. Também funciona como
-          cobertura em gratinados ou para dar um toque crocante a saladas e outras receitas.
+          É ideal para empanar carnes, peixes, mariscos ou até legumes. Também funciona como cobertura
+          em gratinados ou para dar um toque crocante a saladas e outras receitas.
         </p>
       </div>
     </div>
