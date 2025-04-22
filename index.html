@@ -144,20 +144,21 @@
   <div
     class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
   >
-    <!-- Imagem com altura responsiva -->
+    <!-- Imagem com max‑height -->
     <div data-aos="fade-right">
       <img
         src="img/panko-breadcrumbs-1-1200.jpg"
         alt="Panko Breadcrumbs"
         class="w-full rounded-2xl shadow-lg object-contain
-               h-auto md:h-64"
+               max-h-80 md:max-h-96"
       />
     </div>
 
-    <!-- Texto num painel glassmorphism -->
+    <!-- Texto com a mesma max-height e scroll interno -->
     <div
       data-aos="fade-left"
-      class="bg-white bg-opacity-80 backdrop-blur-lg rounded-2xl px-8 py-16"
+      class="bg-white bg-opacity-80 backdrop-blur-lg rounded-2xl px-8 py-8
+             max-h-80 md:max-h-96 overflow-y-auto"
     >
       <h3 class="text-3xl font-semibold text-verde mb-4">Do Grão ao Prato</h3>
       <p class="text-base leading-relaxed text-azul mb-4">
@@ -175,6 +176,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Testimonials / Identity Section (com background reveal) -->
 <section id="testimonials" class="relative py-16 px-6 md:px-12">
