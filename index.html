@@ -274,21 +274,39 @@
     </div>
   </section>
 
-  <!-- Newsletter Section -->
-  <section id="newsletter" class="py-16 px-6 md:px-12 bg-gray-50">
-    <div class="max-w-4xl mx-auto text-center mb-8" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold text-verde mb-4">Subscreva a nossa Newsletter</h2>
-      <p class="text-base text-azul">Receba conteúdos exclusivos e promoções diretamente no seu email.</p>
-    </div>
-    <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="100">
-      <input type="email" required placeholder="O seu email"
-             class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-verde">
-      <button type="submit"
-              class="px-6 py-2 bg-verde text-white rounded-lg font-semibold hover:opacity-90 transition">
+<!-- Newsletter Section -->
+<section
+  id="newsletter"
+  class="py-16 px-6 md:px-12 bg-transparent relative"
+>
+  <!-- Fundo fixo (opcional, mas assegura o mesmo efeito do resto) -->
+  <div
+    class="absolute inset-0 bg-fixed bg-center bg-cover"
+    style="background-image:url('img/webp/fundo_trigo.webp')"
+  ></div>
+
+  <!-- Conteúdo com glassmorphism leve -->
+  <div class="relative z-10 max-w-4xl mx-auto bg-white bg-opacity-50 backdrop-blur-md rounded-2xl p-8 text-center">
+    <h2 class="text-3xl font-semibold text-verde mb-4">
+      Subscreva a nossa Newsletter
+    </h2>
+    <p class="text-base text-azul mb-6 text-justify">
+      Receba conteúdos exclusivos e promoções diretamente no seu email.
+    </p>
+    <form class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up">
+      <input
+        type="email" required placeholder="O seu email"
+        class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-verde"
+      />
+      <button
+        type="submit"
+        class="px-6 py-2 bg-verde text-white rounded-lg font-semibold hover:opacity-90 transition"
+      >
         Subscrever
       </button>
     </form>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-12">
