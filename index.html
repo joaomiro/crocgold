@@ -58,7 +58,6 @@
       <div class="hidden md:flex md:items-center space-x-6">
         <button @click="scrollTo('servicos')" class="text-azul hover:text-verde transition">Serviços</button>
         <button @click="scrollTo('aboutus')"  class="text-azul hover:text-verde transition">Qualidade</button>
-        <button @click="scrollTo('numbers')"  class="text-azul hover:text-verde transition">Logística</button>
         <button @click="scrollTo('testimonials')" class="text-azul hover:text-verde transition">Identidade</button>
         <button @click="scrollTo('identidade')"   class="text-azul hover:text-verde transition">Sustentabilidade</button>
         <button @click="scrollTo('workwithus')"   class="text-azul hover:text-verde transition">Sobre</button>
@@ -74,7 +73,6 @@
       <div x-show="open" class="md:hidden flex flex-col space-y-2 mt-4 px-6">
         <button @click="scrollTo('servicos')" class="text-azul hover:text-verde transition">Serviços</button>
         <button @click="scrollTo('aboutus')"  class="text-azul hover:text-verde transition">Qualidade</button>
-        <button @click="scrollTo('numbers')"  class="text-azul hover:text-verde transition">Logística</button>
         <button @click="scrollTo('testimonials')" class="text-azul hover:text-verde transition">Identidade</button>
         <button @click="scrollTo('identidade')"   class="text-azul hover:text-verde transition">Sustentabilidade</button>
         <button @click="scrollTo('workwithus')"   class="text-azul hover:text-verde transition">Sobre</button>
@@ -157,32 +155,6 @@
       </div>
     </div>
   </section>
-
- <!-- Logistics Section (flip horizontal) -->
-<section id="numbers" class="py-16 px-6 md:px-12 bg-white">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    <!-- Texto primeiro no desktop -->
-    <div data-aos="fade-right" class="lg:order-1">
-      <h2 class="text-4xl font-bold text-verde mb-4">
-        Logística de Alta Performance
-      </h2>
-      <p class="text-base leading-relaxed text-azul mb-6">
-        <strong class="font-bold text-azul">
-          Garantimos entregas eficientes e pontuais
-        </strong>, satisfazendo as exigências do mercado nacional e internacional
-        com rapidez, rastreabilidade e compromisso.
-      </p>
-      <div class="grid grid-cols-2 gap-8">
-        <div data-aos="fade-up">
-          <div class="text-5xl font-extrabold text-verde">99%</div>
-          <p class="text-sm text-azul">Satisfação dos nossos parceiros.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="100">
-          <div class="text-5xl font-extrabold text-verde">+10</div>
-          <p class="text-sm text-azul">Rotas diárias em todo o país.</p>
-        </div>
-      </div>
-    </div>
 
     <!-- Imagem à direita -->
     <div data-aos="fade-left" class="lg:order-2">
