@@ -61,10 +61,13 @@
         <button @click="scrollTo('identidade')"   class="text-azul hover:text-verde transition">Sustentabilidade</button>
         <button @click="scrollTo('workwithus')"   class="text-azul hover:text-verde transition">Sobre</button>
         <button @click="scrollTo('gallery')"      class="text-azul hover:text-verde transition">Galeria</button>
-        <a href="https://catalogo"
-           class="ml-4 px-4 py-2 border border-verde text-verde rounded-lg hover:bg-verde hover:text-white transition">
-          Catálogo <i class="bi bi-download"></i>
-        </a>
+       <a href="catalogo_crocgold.pdf"
+   class="ml-4 px-4 py-2 border border-verde text-verde rounded-lg hover:bg-verde hover:text-white transition"
+   download="Crocgold_Catalogo_2025.pdf"
+   target="_blank"
+>
+  Catálogo <i class="bi bi-download"></i>
+</a>
       </div>
       <button @click="open = !open" x-data="{ open: false }" class="md:hidden text-2xl text-azul">
         <i class="bi bi-list"></i>
